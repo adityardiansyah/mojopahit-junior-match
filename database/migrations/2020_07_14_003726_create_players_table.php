@@ -26,7 +26,6 @@ class CreatePlayersTable extends Migration
             $table->string('date_born');
             $table->integer('goal')->nullable();
             $table->string('assist')->nullable();
-            $table->string('school_origin')->nullable();
             $table->string('from_school')->nullable();
             $table->timestamps();
         });

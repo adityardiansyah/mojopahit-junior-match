@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <div class="kt-subheader__toolbar">
-                    <a href="{{ route('admin.list-club-create') }}" class="btn btn-primary float-right">Tambah Club</a>
+                    <a href="{{ route('admin.list-club-create') }}" class="btn btn-primary float-right"><i class="la la-plus"></i> Tambah Club</a>
                 </div>
             </div>
         </div>
@@ -68,13 +68,13 @@
                                     <b>Email :</b> {{$item->assistant_email}}
                                 </td>
                                 <td>
-                                    <button wire:click="delete({{$item->id}})" data-toggle="tooltip" data-placement="top" title="Hapus" id="button" type="button" class="btn btn-hover-danger btn-elevate-hover btn-icon btn-sm btn-icon-md btn-circle">
+                                    <button wire:click="delete({{$item->id}})" onclick="deleteData({{$item->id}}) || event.stopImmediatePropagation()" data-toggle="tooltip" data-placement="top" title="Hapus" id="button" type="button" class="btn btn-hover-danger btn-elevate-hover btn-icon btn-sm btn-icon-md btn-circle">
                                         <i class="la la-trash"></i>
                                     </button>
                                     <button wire:click="edit({{$item->id}})" data-toggle="tooltip" data-placement="top" title="Edit" type="button" class="btn btn-hover-brand btn-elevate-hover btn-icon btn-sm btn-icon-md btn-circle">
                                         <i class="la la-pencil"></i>
                                     </button>
-                                    <button wire:click="add_players({{$item->id}})" data-toggle="tooltip" data-placement="top" title="Tambahkan Pemain" type="button" class="btn btn-hover-primary btn-elevate-hover btn-icon btn-sm btn-icon-md btn-circle">
+                                    <button wire:click="$emit('add_player',{{$item->id}})" data-toggle="tooltip" data-placement="top" title="Tambahkan Pemain" type="button" class="btn btn-hover-primary btn-elevate-hover btn-icon btn-sm btn-icon-md btn-circle">
                                         <i class="la la-user-plus"></i>
                                     </button>
                                 </td>
@@ -96,3 +96,9 @@
         </div>
     </div>
 </div>
+
+@push('scripts')
+    <script>
+        $('[data-toggle="tooltip"]').tooltip()
+    </script>
+@endpush

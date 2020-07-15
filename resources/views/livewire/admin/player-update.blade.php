@@ -1,11 +1,11 @@
 @section('title')
-    Tambah Pemain 
+    Edit Pemain 
 @endsection
 <div>
     <div class="kt-subheader   kt-grid__item" id="kt_subheader">
         <div class="kt-container  kt-container--fluid ">
             <div class="kt-subheader__main">
-                <h3 class="kt-subheader__title">Formulir Tambah Pemain</h3>
+                <h3 class="kt-subheader__title">Formulir Edit Pemain</h3>
             </div>
             <div class="kt-subheader__toolbar">
                 <a href="{{ route('admin.players') }}" class="btn btn-default btn-sm btn-bold"><i class="la la-arrow-left"></i>Kembali</a>
@@ -17,7 +17,7 @@
             <div class="col-md-12">
                 <div class="kt-portlet kt-portlet--mobile">
                     <div class="kt-portlet__body pt-2">
-                        <div class="kt-heading kt-heading--md"> Tambah Pemain</div>
+                        <div class="kt-heading kt-heading--md"> Edit Pemain</div>
                         @if ($errors->any())
                             <div class="alert alert-danger alert-bold" role="alert">
                                 <div class="alert-text">
@@ -29,17 +29,11 @@
                                 </div>
                             </div>
                         @endif
-                <form action="" method="post" enctype="multipart/form-data" wire:submit.prevent="store">
+                <form action="" method="post" enctype="multipart/form-data" wire:submit.prevent="update">
                     <div class="modal-body">
                             <table class="mt-3">
                                 @csrf
                                 <div class="row">
-                                    @if(!empty($team_id))
-                                    <div class="col-md-3">
-                                        <label for="">Nama Team</label>
-                                        <input type="text" class="form-control" name="" value="{{ $team_id->name }}" readonly required id="" autocomplete="off">
-                                    </div>
-                                    @else
                                     <div class="col-md-3">
                                         <label for="">Nama Team</label>
                                         <div wire:ignore>
@@ -51,7 +45,6 @@
                                             </select>
                                         </div>
                                     </div>
-                                    @endif
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label for="name">Nama Lengkap</label>

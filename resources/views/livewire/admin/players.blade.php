@@ -51,18 +51,18 @@
                             <tr>
                                 <td>{{ $key+1 }}</td>
                                 <td>{{ $item->name }}</td>
-                                <td>{{ $item->name }}</td>
+                                <td>{{ $item->club->name }}</td>
                                 <td>{{ $item->back_number }}</td>
                                 <td>{{ $item->position }}</td>
                                 <td>
-                                    <button wire:click="delete({{$item->id}})" data-toggle="tooltip" data-placement="top" title="Hapus" id="button" type="button" class="btn btn-hover-danger btn-elevate-hover btn-icon btn-sm btn-icon-md btn-circle">
+                                    <button wire:click="delete({{$item->id}})" onclick="deleteData({{$item->id}}) || event.stopImmediatePropagation()" data-toggle="tooltip" data-placement="top" title="Hapus" id="button" type="button" class="btn btn-hover-danger btn-elevate-hover btn-icon btn-sm btn-icon-md btn-circle">
                                         <i class="la la-trash"></i>
                                     </button>
                                     <button wire:click="edit({{$item->id}})" data-toggle="tooltip" data-placement="top" title="Edit" type="button" class="btn btn-hover-brand btn-elevate-hover btn-icon btn-sm btn-icon-md btn-circle">
                                         <i class="la la-pencil"></i>
                                     </button>
-                                    <button wire:click="add_players({{$item->id}})" data-toggle="tooltip" data-placement="top" title="Tambahkan Pemain" type="button" class="btn btn-hover-primary btn-elevate-hover btn-icon btn-sm btn-icon-md btn-circle">
-                                        <i class="la la-user-plus"></i>
+                                    <button wire:click="add_players({{$item->id}})" data-toggle="tooltip" data-placement="top" title="Lihat Detail Pemain" type="button" class="btn btn-hover-primary btn-elevate-hover btn-icon btn-sm btn-icon-md btn-circle">
+                                        <i class="la la-eye"></i>
                                     </button>
                                 </td>
                             </tr>
@@ -83,3 +83,9 @@
         </div>
     </div>
 </div>
+
+@push('scripts')
+    <script>
+        $('[data-toggle="tooltip"]').tooltip()
+    </script>
+@endpush

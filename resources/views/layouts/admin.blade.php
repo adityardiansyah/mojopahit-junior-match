@@ -289,11 +289,12 @@
 
 <script src="{{ asset('assets/plugins/general/jquery/dist/jquery.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 <script src="{{ asset('assets/js/scripts.bundle.js') }}" type="text/javascript"></script>
+<script src="{{ asset('assets/plugins/general/select2/dist/js/select2.full.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
+<script src="{{ asset('assets/plugins/general/tooltip.js/dist/umd/tooltip.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/general/popper.js/dist/umd/popper.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/general/bootstrap/dist/js/bootstrap.min.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/general/js-cookie/src/js.cookie.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/general/moment/min/moment.min.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/tooltip.js/dist/umd/tooltip.min.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/general/perfect-scrollbar/dist/perfect-scrollbar.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/general/sticky-js/dist/sticky.min.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/general/wnumb/wNumb.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
@@ -307,7 +308,6 @@
 <script src="{{ asset('assets/plugins/general/bootstrap-select/dist/js/bootstrap-select.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/general/bootstrap-switch/dist/js/bootstrap-switch.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/general/js/global/integration/plugins/bootstrap-switch.init.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/select2/dist/js/select2.full.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/general/autosize/dist/autosize.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/general/summernote/dist/summernote.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/general/toastr/build/toastr.min.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
@@ -339,8 +339,11 @@
             confirmButtonText: 'Hapus!',
             cancelButtonText: 'Batal'
         }).then((result) => {
+            // console.log(result);
+            
             if (result.value) {
-                $('#'+target).submit();
+                window.livewire.emit('delete',target);
+                // $('#'+target).submit();
             }
         });
     }
@@ -363,85 +366,40 @@
         nStr = nStr.replace(/\./g,'');
         return nStr;
     }
-    $('.select2').select2();
-    $('.datepicker').datepicker({
-        autoclose:true,
-        format:'dd-mm-yyyy',
-        oritentation:"auto",
-        useCurrent: false,
-    });
-    document.addEventListener("livewire:load", function(event) {
-        window.livewire.hook('beforeDomUpdate', () => {
-            $('.kt-selectpicker').selectpicker();
+    // $('.select2').select2();
+    // $('.datepicker').datepicker({
+    //     autoclose:true,
+    //     format:'dd-mm-yyyy',
+    //     oritentation:"auto",
+    //     useCurrent: false,
+    // });
+    // $('.kt-selectpicker').selectpicker();
             
-            $('.datepicker-month').datepicker({
-                autoclose: true,
-                format: "mm-yyyy",
-                startView: "months",
-                minViewMode: "months",
-            });
-            $('.timepicker').timepicker({
-                showMeridian: false,
-                showSeconds: true,
-                icons: {
-                    up: 'fa fa-chevron-up',
-                    down: 'fa fa-chevron-down'
-                }
-            });
-            $('.table-responsive').on('show.bs.dropdown', function () {
-                $('.table-responsive').css( "overflow", "inherit" );
-                $('.xdsoft_autocomplete_dropdown').css( "overflow", "inherit!important" );
-            });
-
-            $('.table-responsive').on('hide.bs.dropdown', function () {
-                $('.table-responsive').css( "overflow", "auto" );
-                $('.xdsoft_autocomplete_dropdown').css( "overflow", "auto!important" );
-            });
-
-            $(function () {
-                $('[data-toggle="tooltip"]').tooltip()
-            })
-        });
-
-        window.livewire.hook('afterDomUpdate', () => {
-            
-            $('.select2').select2();
-            $('.kt-selectpicker').selectpicker();
-            $('.datepicker').datepicker({
-                autoclose:true,
-                format:'dd-mm-yyyy',
-                oritentation:"auto",
-                useCurrent: false,
-            });
-            $('.datepicker-month').datepicker({
-                autoclose: true,
-                format: "mm-yyyy",
-                startView: "months",
-                minViewMode: "months",
-            });
-            $('.timepicker').timepicker({
-                showMeridian: false,
-                showSeconds: true,
-                icons: {
-                    up: 'fa fa-chevron-up',
-                    down: 'fa fa-chevron-down'
-                }
-            });
-            $('.table-responsive').on('show.bs.dropdown', function () {
-                $('.table-responsive').css( "overflow", "inherit" );
-                $('.xdsoft_autocomplete_dropdown').css( "overflow", "inherit!important" );
-            });
-
-            $('.table-responsive').on('hide.bs.dropdown', function () {
-                $('.table-responsive').css( "overflow", "auto" );
-                $('.xdsoft_autocomplete_dropdown').css( "overflow", "auto!important" );
-            });
-
-            $(function () {
-                $('[data-toggle="tooltip"]').tooltip()
-            })
-        });
+    // $('.datepicker-month').datepicker({
+    //     autoclose: true,
+    //     format: "mm-yyyy",
+    //     startView: "months",
+    //     minViewMode: "months",
+    // });
+    // $('.timepicker').timepicker({
+    //     showMeridian: false,
+    //     showSeconds: true,
+    //     icons: {
+    //         up: 'fa fa-chevron-up',
+    //         down: 'fa fa-chevron-down'
+    //     }
+    // });
+    $('.table-responsive').on('show.bs.dropdown', function () {
+        $('.table-responsive').css( "overflow", "inherit" );
+        $('.xdsoft_autocomplete_dropdown').css( "overflow", "inherit!important" );
     });
+
+    $('.table-responsive').on('hide.bs.dropdown', function () {
+        $('.table-responsive').css( "overflow", "auto" );
+        $('.xdsoft_autocomplete_dropdown').css( "overflow", "auto!important" );
+    });
+
+    
 </script>
 
 @stack('scripts')
