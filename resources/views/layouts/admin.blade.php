@@ -171,11 +171,11 @@
                             <li class="kt-menu__item" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
                                 <a href="/admin/article" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-file-1"></i><span class="kt-menu__link-text">Artikel</span></a>
                             </li>
-                            <li class="kt-menu__item" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
-                                <a href="/admin/about" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-users"></i><span class="kt-menu__link-text">Tentang Kami</span></a>
+                            <li class="kt-menu__item @if($menu_active == 'about') kt-menu__item--here @endif"" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+                                <a href="{{ url('/admin/page/about') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-users"></i><span class="kt-menu__link-text">Tentang Kami</span></a>
                             </li>
-                            <li class="kt-menu__item" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
-                                <a href="/admin/call" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-chat-2"></i><span class="kt-menu__link-text">Hubungi Kami</span></a>
+                            <li class="kt-menu__item @if($menu_active == 'contact') kt-menu__item--here @endif"" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+                                <a href="{{ url('/admin/page/contact') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-chat-2"></i><span class="kt-menu__link-text">Hubungi Kami</span></a>
                             </li>
                             <li class="kt-menu__item" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
                                 <a href="/admin/users" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-user"></i><span class="kt-menu__link-text">User</span></a>
@@ -287,7 +287,8 @@
     };
 </script>
 
-<script src="{{ asset('assets/plugins/general/jquery/dist/jquery.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
+<script src="{{ asset('assets/plugins/general/jquery/dist/jquery.js') }}"  type="text/javascript"></script>
+<script src="{{ asset('assets/plugins/general/summernote/dist/summernote.js') }}" type="text/javascript"></script>
 <script src="{{ asset('assets/js/scripts.bundle.js') }}" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/general/select2/dist/js/select2.full.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/general/tooltip.js/dist/umd/tooltip.min.js') }}" type="text/javascript"></script>
@@ -309,13 +310,13 @@
 <script src="{{ asset('assets/plugins/general/bootstrap-switch/dist/js/bootstrap-switch.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/general/js/global/integration/plugins/bootstrap-switch.init.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/general/autosize/dist/autosize.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/summernote/dist/summernote.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/general/toastr/build/toastr.min.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/general/sweetalert2/dist/sweetalert2.min.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/general/js/global/integration/plugins/sweetalert2.init.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 
 {{-- <script src="{{ asset('assets/js/autoNumeric.js') }}" data-turbolinks-eval="true" type="text/javascript"></script> --}}
 <script>
+    
     @if(Session::has('message'))
         toastr.options.closeButton = true;
         toastr.options.timeOut = 0;

@@ -33,14 +33,15 @@
                     <div class="modal-body">
                             <table class="mt-3">
                                 @csrf
+                                <input type="hidden" wire:model="player_id" value="{{ $player_id }}">
                                 <div class="row">
                                     <div class="col-md-3">
                                         <label for="">Nama Team</label>
                                         <div wire:ignore>
-                                            <select name="club_list_id" id="" class="select-2 form-control">
+                                            <select name="club_list_id" id="" class="select-2 form-control" wire:model="club_list_id">
                                                 <option value="0">Pilih Team Pemain</option>
                                                 @foreach ($team as $item)
-                                                    <option value="{{$item->id}}">{{ $item->name }}</option>
+                                                    <option value="{{$item->id}}" @if(!empty($club_list_id) && $item->id == $club_list_id) selected @endif>{{ $item->name }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -75,7 +76,7 @@
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label for="name">Tanggal Lahir</label>
-                                            <input type="text" class="form-control" name="date_born" required id="datepicker" data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" autocomplete="off">
+                                            <input wire:model="date_born" type="text" class="form-control" name="date_born" required id="datepicker" data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" autocomplete="off">
                                         </div>
                                     </div>
                                     <div class="col-md-3">
@@ -96,7 +97,14 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label for="">Foto Pemain</label><small> *maks ukuran foto 1 mb</small>
-                                        <input type="file" wire:model="photo" name="photo" id="photo" class="form-control">
+                                        <br>
+                                        @if(!empty($photo))
+                                        <div class="row">
+                                            <img src="{{ asset('storage/'.$photo) }}" alt="" height="64px" class="m-auto text-center mb-3">
+                                        </div>
+                                        {{-- <img src="{{ $uploadPhoto->temporaryUrl() }}" alt="" height="64px" class="m-auto text-center mb-3"> --}}
+                                        @endif
+                                        <input type="file" wire:model="uploadPhoto" name="photo" id="photo" class="form-control">
                                     </div>
                                 </div>
                             </table>
@@ -113,6 +121,17 @@
 
 @push('scripts')
     <script>
+        window.livewire.on('changePhoto', () => {
+            let input = document.getElementById('photo');
+            let file = input.files[0];
+            window.livewire.emit('photoUpload', file)
+        })
+
+        //     let reader = new FileReader();
+        //     reader.onloadend = () => {
+        //     }
+        //     reader.readAsDataURL(file);
+
         $('.select-2').select2();
         $('.select-2').on('change', function (e) {
             @this.set('club_list_id', e.target.value);
@@ -126,5 +145,6 @@
             }).on('changeDate', function(e){
             @this.set('date_born', $('#datepicker').val());
         });
+
     </script>
 @endpush

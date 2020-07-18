@@ -61,7 +61,7 @@
                                     <button wire:click="edit({{$item->id}})" data-toggle="tooltip" data-placement="top" title="Edit" type="button" class="btn btn-hover-brand btn-elevate-hover btn-icon btn-sm btn-icon-md btn-circle">
                                         <i class="la la-pencil"></i>
                                     </button>
-                                    <button wire:click="add_players({{$item->id}})" data-toggle="tooltip" data-placement="top" title="Lihat Detail Pemain" type="button" class="btn btn-hover-primary btn-elevate-hover btn-icon btn-sm btn-icon-md btn-circle">
+                                    <button wire:click="detail({{$item->id}})" data-toggle="tooltip" data-placement="top" title="Lihat Detail Pemain" type="button" class="btn btn-hover-primary btn-elevate-hover btn-icon btn-sm btn-icon-md btn-circle">
                                         <i class="la la-eye"></i>
                                     </button>
                                 </td>

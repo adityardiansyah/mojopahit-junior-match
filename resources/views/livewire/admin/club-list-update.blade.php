@@ -64,12 +64,12 @@
                                     <div class="col-md-6">
                                         <label for="">Logo Team</label><br>
                                         <a href="{{ asset('storage/'.$logo) }}" target="_black"><img src="{{ asset('storage/'.$logo) }}" class="img-fluid" alt="" style="height:64px;"></a>
-                                        <input type="file" wire:model="logo" name="logo" id="logo" class="form-control">
+                                        <input type="file" wire:model="edit_logo" name="logo" id="logo" class="form-control">
                                     </div>
                                     <div class="col-md-6">
                                         <label for="">Cover Team</label><br>
                                         <a href="{{ asset('storage/'.$cover) }}" target="_black"><img src="{{ asset('storage/'.$cover) }}" class="img-fluid" alt="" style="height:64px;"></a>
-                                        <input type="file" wire:model="cover" name="cover" id="cover" class="form-control">
+                                        <input type="file" wire:model="edit_cover" name="cover" id="cover" class="form-control">
                                     </div>
                                 </div>
                                 <hr>
@@ -105,7 +105,7 @@
                                     <div class="col-md-12">
                                         <label for="">Foto Perwakilan</label><br>
                                         <a href="{{ asset('storage/'.$assistant_photo) }}" target="_black"><img src="{{ asset('storage/'.$assistant_photo) }}" class="img-fluid" alt="" style="height:64px;"></a>
-                                        <input type="file" wire:model="assistant_photo" name="assistant_photo" id="assistant_photo" class="form-control">
+                                        <input type="file" wire:model="edit_assistant_photo" name="assistant_photo" id="assistant_photo" class="form-control">
                                     </div>
                                 </div>
                             </table>

@@ -47,4 +47,9 @@ class Players extends Component
     {
         return redirect()->route('admin.player-edit', $id);
     }
+
+    public function detail($player_id)
+    {
+        return redirect()->route('admin.player-detail', ['id' => $player_id]);
+    }
 }

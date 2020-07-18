@@ -3,21 +3,27 @@
 namespace App\Http\Livewire\Admin;
 
 use Livewire\Component;
+use Livewire\WithFileUploads;
 use App\ClubList;
 
 class ClubListUpdate extends Component
 {
+    use WithFileUploads;
+
     public $club_id;
     public $name;
     public $address;
     public $age_level;
     public $logo;
+    public $edit_logo;
     public $cover;
+    public $edit_cover;
     public $assistant_name;
     public $assistant_number;
     public $assistant_email;
     public $assistant_level;
     public $assistant_photo;
+    public $edit_assistant_photo;
 
     public function mount($id)
     {
@@ -47,10 +53,11 @@ class ClubListUpdate extends Component
         $data = ClubList::find($this->club_id);
 
         if($this->club_id){
-            $imageCover = empty(request()->file('cover'))? $this->cover : $this->cover->store("cover",'public');
-            $imageLogo = empty(request()->file('logo'))? $this->logo : $this->logo->store("logo",'public');
-            $imagePhoto = empty(request()->file('assistant_photo'))? $this->assistant_photo : $this->assistant_photo->store("assistant_photo",'public');
-    
+            $imageLogo = $this->update_image($this->logo, $this->edit_logo, $data->logo, 'edit_logo','logo');
+            $imageCover = $this->update_image($this->cover, $this->edit_cover, $data->cover, 'edit_cover','cover');
+            $imagePhoto = $this->update_image($this->assistant_photo, $this->edit_assistant_photo, $data->assistant_photo, 'edit_assistant_photo','assistant_photo');
+
+
             $data->update([
                 'name' => $this->name,
                 'address' => $this->address,
@@ -70,5 +77,22 @@ class ClubListUpdate extends Component
 
         //redirect
         return redirect()->route('admin.list-club');
+    }
+    
+    public function update_image($model_name, $model_edit, $url_image, $name_input, $folder)
+    {
+        $image = $model_name;
+        if($model_edit){
+            $this->validate([
+                ''.$name_input.'' => 'image|mimes:jpeg,png,jpg|max:1024'
+            ]);
+            $image = $model_edit->store("".$folder."",'public');
+            $url = storage_path('app/public/'.$url_image);
+
+            if(is_file($url)){
+                unlink($url);
+            }
+        }
+        return $image;
     }
 }
