@@ -10,7 +10,7 @@
                     <h3 class="kt-subheader__title">Artikel</h3>
                     <span class="kt-subheader__separator kt-subheader__separator--v"></span>
                     <div class="kt-subheader__group">
-                        <span class="kt-subheader__desc kt-margin-l-10"> data ditemukan</span>
+                        <span class="kt-subheader__desc kt-margin-l-10">{{ $countData }} data ditemukan</span>
                         <select wire:model="paginate" name="" id="" class="form-control sm w-auto">
                             <option value="10">10</option>
                             <option value="20">20</option>
@@ -25,11 +25,10 @@
                     </div>
                 </div>
                 <div class="kt-subheader__toolbar">
-                    <a href="{{ route('admin.list-club-create') }}" class="btn btn-primary float-right"><i class="la la-plus"></i> Tambah Artikel</a>
+                    <a href="{{ route('admin.article-create') }}" class="btn btn-primary float-right"><i class="la la-plus"></i> Tambah Artikel</a>
                 </div>
             </div>
         </div>
-        {{-- @include('tools.search') --}}
     </form>
     
     <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
@@ -49,24 +48,14 @@
                         </tr>
                         </thead>
                         <tbody>
-                            {{-- @forelse ($data as $key => $item)
+                            @forelse ($data as $key => $item)
                             <tr>
                                 <td>{{ $key+1 }}</td>
-                                <td width="100px"><img src="{{ asset('storage/'.$item->logo)}}" class="img-fluid" alt=""></td>
-                                <td>
-                                    <b>Nama Team :</b> {{ $item->name }}<br>
-                                    <b>Jenjang Umur :</b> {{ $item->age_level }} <br>
-                                    <b>Alamat : </b> {{ $item->address }}
-                                </td>
-                                <td width="100px">
-                                    <img src="{{ asset('storage/'.$item->assistant_photo)}}" class="img-fluid" alt="">
-                                </td>
-                                <td>
-                                    <b>Nama : </b> {{ $item->assistant_name }}<br>
-                                    <b>Jabatan :</b> {{$item->assistant_level}} <br>
-                                    <b>No. Telepon :</b> {{$item->assistant_number}} <br>
-                                    <b>Email :</b> {{$item->assistant_email}}
-                                </td>
+                                <td>{{ $item->title }}</td>
+                                <td>{{ $item->user->name }}</td>
+                                <td>{{ $item->category->name }}</td>
+                                <td>{{ $item->meta_keyword }}</td>
+                                <td>{{ $item->published_at }}</td>
                                 <td>
                                     <button wire:click="delete({{$item->id}})" onclick="deleteData({{$item->id}}) || event.stopImmediatePropagation()" data-toggle="tooltip" data-placement="top" title="Hapus" id="button" type="button" class="btn btn-hover-danger btn-elevate-hover btn-icon btn-sm btn-icon-md btn-circle">
                                         <i class="la la-trash"></i>
@@ -83,13 +72,13 @@
                                 <tr>
                                     <td colspan="6" class="text-center">Data tidak ada</td>
                                 </tr>
-                            @endforelse --}}
+                            @endforelse
                         </tbody>
                     </table>
                 </div>
                 <div class="m-auto">
                     <div class="mt-3">
-                        {{-- {{ $data->links() }} --}}
+                        {{ $data->links() }}
                     </div>
                 </div>
             </div>

@@ -94,5 +94,6 @@
             }
         }
         });
+        $('.dropdown-toggle').dropdown()
     </script>
 @endpush

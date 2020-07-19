@@ -17,7 +17,6 @@
     <link href="{{ asset('assets/plugins/general/bootstrap-select/dist/css/bootstrap-select.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/plugins/general/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/plugins/general/select2/dist/css/select2.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/plugins/general/summernote/dist/summernote.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/plugins/general/animate.css/animate.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/plugins/general/toastr/build/toastr.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/plugins/general/sweetalert2/dist/sweetalert2.css') }}" rel="stylesheet" type="text/css" />
@@ -31,7 +30,8 @@
     <link href="{{ asset('assets/css/skins/header/menu/light.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/css/skins/brand/dark.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/css/skins/aside/dark.css') }}" rel="stylesheet" type="text/css" />
-
+    <link href="{{ asset('assets/plugins/general/summernote/dist/summernote.css') }}" charset="utf-8" rel="stylesheet" type="text/css" />
+    {{-- <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet"> --}}
     <link rel="shortcut icon" href="{{ asset('assets/media/logos/favicon.ico') }}" />
     
     <!-- Scripts -->
@@ -291,11 +291,12 @@
 </script>
 
 <script src="{{ asset('assets/plugins/general/jquery/dist/jquery.js') }}"  type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/summernote/dist/summernote.js') }}" type="text/javascript"></script>
+<script src="{{ asset('assets/plugins/general/summernote/dist/summernote.js') }}" charset="utf-8" type="text/javascript"></script>
 <script src="{{ asset('assets/js/scripts.bundle.js') }}" type="text/javascript"></script>
+<script src="{{ asset('assets/plugins/general/popper.js/dist/umd/popper.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/general/select2/dist/js/select2.full.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/general/tooltip.js/dist/umd/tooltip.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/popper.js/dist/umd/popper.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
+{{-- <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script> --}}
 <script src="{{ asset('assets/plugins/general/bootstrap/dist/js/bootstrap.min.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/general/js-cookie/src/js.cookie.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/general/moment/min/moment.min.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>

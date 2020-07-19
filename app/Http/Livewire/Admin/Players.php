@@ -32,7 +32,13 @@ class Players extends Component
     {
         if($id){
             try{
-                Player::find($id)->delete();
+                $data = Player::find($id);
+                $url = storage_path('app/public/'.$data->photo);
+            
+                if(is_file($url)){
+                    unlink($url);
+                }
+                $data->delete();
 
                 session()->flash('message', array('type' => 'success', 'content' => 'Data berhasil dihapus!'));
                 return redirect()->route('admin.players');
