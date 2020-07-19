@@ -168,13 +168,16 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="kt-menu__item" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
-                                <a href="/admin/article" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-file-1"></i><span class="kt-menu__link-text">Artikel</span></a>
+                            <li class="kt-menu__item @if($menu_active == 'article') kt-menu__item--here @endif" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+                                <a href="{{ url('/admin/article') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-file-1"></i><span class="kt-menu__link-text">Artikel</span></a>
                             </li>
-                            <li class="kt-menu__item @if($menu_active == 'about') kt-menu__item--here @endif"" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+                            <li class="kt-menu__item @if($menu_active == 'category') kt-menu__item--here @endif" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+                                <a href="{{ url('/admin/category') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-list"></i><span class="kt-menu__link-text">Kategori</span></a>
+                            </li>
+                            <li class="kt-menu__item @if($menu_active == 'about') kt-menu__item--here @endif" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
                                 <a href="{{ url('/admin/page/about') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-users"></i><span class="kt-menu__link-text">Tentang Kami</span></a>
                             </li>
-                            <li class="kt-menu__item @if($menu_active == 'contact') kt-menu__item--here @endif"" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+                            <li class="kt-menu__item @if($menu_active == 'contact') kt-menu__item--here @endif" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
                                 <a href="{{ url('/admin/page/contact') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-chat-2"></i><span class="kt-menu__link-text">Hubungi Kami</span></a>
                             </li>
                             <li class="kt-menu__item" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">

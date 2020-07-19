@@ -17,6 +17,7 @@ class PageAbout extends Component
     public $imageShow;
     public $description;
     public $maps;
+    public $video;
     
     public function mount()
     {
@@ -56,6 +57,7 @@ class PageAbout extends Component
         }
         $description = [
             'description' => $this->description,
+            'video' => $this->video,
             'maps' => $this->maps
         ];
         if($cek->type != 'about'){

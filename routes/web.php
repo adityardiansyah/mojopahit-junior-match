@@ -34,4 +34,8 @@ Route::group(['middleware' => 'auth'], function(){
     Route::livewire('/admin/player-detail/{id}','admin.player-detail')->layout('layouts.admin')->name('admin.player-detail');
 
     Route::livewire('/admin/page/{slug}','admin.page-index')->layout('layouts.admin')->name('admin.page-index');
+
+    Route::livewire('/admin/article','admin.article')->layout('layouts.admin')->name('admin.article');
+
+    Route::livewire('/admin/category','admin.category')->layout('layouts.admin')->name('admin.category');
 });

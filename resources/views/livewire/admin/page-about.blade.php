@@ -56,6 +56,12 @@
                                         <input type="text" wire:model="maps" class="form-control">
                                     </div>
                                 </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="maps">URL Video</label>
+                                        <input type="text" wire:model="video" class="form-control">
+                                    </div>
+                                </div>
                             </div>
                             
                         </table>
