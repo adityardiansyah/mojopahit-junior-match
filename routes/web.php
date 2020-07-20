@@ -14,9 +14,9 @@ Route::get('storage/{folder}/{filename}', function ($folder,$filename){
     return $response;
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
@@ -41,3 +41,6 @@ Route::group(['middleware' => 'auth'], function(){
 
     Route::livewire('/admin/category','admin.category')->layout('layouts.admin')->name('admin.category');
 });
+
+Route::livewire('/','frontend.index')->layout('layouts.main')->name('index');
+Route::livewire('/tentang-kami','frontend.slider')->layout('layouts.main')->name('slider');
