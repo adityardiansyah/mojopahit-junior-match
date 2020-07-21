@@ -51,7 +51,7 @@
               <div class="auto-container clearfix">
                   <!--Logo-->
                   <div class="logo-outer">
-                  <div class="logo"><a href="/"><img src="{{ asset('images/logo.png')}}" class="img-fluid" style="height:50px;" alt="" title="Mojopahit Junior Match"></a></div>
+                    <div class="logo"><a href="/"><img src="{{ asset('images/logo.png')}}" class="img-fluid" style="height:50px;" alt="" title="Mojopahit Junior Match"></a></div>
                   </div>
 
                   <!--Info-->
@@ -163,7 +163,7 @@
             <div class="auto-container clearfix">
                 <!--Logo-->
                 <div class="logo pull-left">
-                    {{-- <a href="index-2.html" title=""><img src="images/logo-small.png" alt="" title=""></a> --}}
+                    <a href="/" title="Mojopahit Junior Match"><img src="{{ asset('images/logo.png')}}" style="height: 50px;" alt="Mojopahit Junior Match" title="Mojopahit Junior Match"></a>
                 </div>
                 <!--Right Col-->
                 <div class="pull-right">

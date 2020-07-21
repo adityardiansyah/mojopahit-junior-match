@@ -17,6 +17,6 @@ class Category extends Model
     {
         return $this->hasOne('App\Category','id', 'parent_id')->withDefault([
                 'name' => 'Tidak Ada',
-            ]);;
+            ]);
     }
 }
