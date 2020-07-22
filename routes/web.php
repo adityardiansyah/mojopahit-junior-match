@@ -20,8 +20,6 @@ Route::get('storage/{folder}/{filename}', function ($folder,$filename){
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
 Route::group(['middleware' => 'auth'], function(){
     Route::livewire('/admin','admin.dashboard')->layout('layouts.admin')->name('admin');
     Route::livewire('/admin/list-club','admin.club-list-index')->layout('layouts.admin')->name('admin.list-club');
@@ -43,4 +41,4 @@ Route::group(['middleware' => 'auth'], function(){
 });
 
 Route::livewire('/','frontend.index')->layout('layouts.main')->name('index');
-Route::livewire('/tentang-kami','frontend.slider')->layout('layouts.main')->name('slider');
+Route::livewire('/tentang-kami','frontend.about')->layout('layouts.main')->name('about');

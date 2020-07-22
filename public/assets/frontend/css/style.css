@@ -1872,7 +1872,7 @@ img {
     top: 0;
     height: 60px;
     width: 8px;
-    background: #ed7902;
+    background: yellow;
     content: '';
 }
 
@@ -1886,7 +1886,7 @@ img {
     float: left;
     font-size: 13px;
     line-height: 25px;
-    color: #ed7902;
+    color: yellow;
     font-weight: 400;
     text-transform: capitalize;
     cursor: default;
@@ -2388,6 +2388,7 @@ img {
 ***/
 
 .about-section-two {
+    background: #010914 !important;
     position: relative;
     padding: 100px 0 50px;
 }
@@ -9194,7 +9195,7 @@ a.ui-button:active,
     bottom: 0;
     height: 2px;
     width: 50px;
-    background-color: #ed7902;
+    background-color: #ffffff;
     content: "";
 }
 
@@ -9289,11 +9290,11 @@ a.ui-button:active,
 }
 
 .main-footer .list li:hover:before {
-    background-color: #ed7902;
+    background-color: #ffffff;
 }
 
 .main-footer .list li a:hover {
-    color: #fa7720;
+    color: #ffffff;
 }
 
 .main-footer .links-widget {
@@ -9331,7 +9332,7 @@ a.ui-button:active,
     top: 0;
     font-size: 18px;
     line-height: 25px;
-    color: #ed7902;
+    color: #ffffff;
 }
 
 .main-footer .contact-list li a {
@@ -9374,11 +9375,12 @@ a.ui-button:active,
 
 .main-footer.alternate .footer-bottom {
     border-top: 0;
-    background-color: rgba(0, 0, 0, .10);
+    background-color: #010914;
 }
 
 .main-footer.alternate:before {
-    background-image: url(../images/icons/pattern-2.jpg);
+    background: #00132d;
+    /* background-image: url(../images/icons/pattern-2.jpg); */
     background-repeat: repeat;
     background-position: center;
     opacity: 1;

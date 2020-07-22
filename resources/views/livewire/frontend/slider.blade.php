@@ -58,6 +58,19 @@
         .carousel-control-next{
             z-index: 20;
         }
+        .slider-btn-info{
+            background: transparent;
+            padding: 30px 66px;
+            border-radius: 8px;
+            font-weight: 700;
+            margin-top: 12px;
+            border: 2px solid yellow;
+            color: yellow;
+            font-size: 20pt;
+            position: relative;
+            top: 100px;
+            right: -180px;
+        }
     </style>
 @endsection
 <div>
@@ -104,10 +117,16 @@
                 <div class="auto-container">
                     <div class="row">
                         <div class="col-md-6">
-                        <div class="slider-caption">
-                            <h1 class="slider-h1">MAJAPAHIT</h1>
-                            <h2 class="slider-h2">INFO & UPDATE</h2>
-                            <button class="slider-btn">SELENGKAPNYA</button>
+                            <div class="slider-caption wow fadeInUp" data-wow-delay="400ms">
+                                <h1 class="slider-h1">MAJAPAHIT</h1>
+                                <h2 class="slider-h2">INFO & UPDATE</h2>
+                                <button class="slider-btn">SELENGKAPNYA</button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="slider-caption wow fadeInUp" data-wow-delay="400ms">
+                                <button class="slider-btn-info">UPDATE KOMPETISI</button>
+                            </div>
                         </div>
                     </div>
                 </div>
