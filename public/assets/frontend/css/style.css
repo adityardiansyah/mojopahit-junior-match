@@ -1704,7 +1704,7 @@ img {
     height: 100%;
     max-height: 100%;
     overflow-y: auto;
-    background: #ffffff;
+    background: #00132D;
     padding: 0px 0px;
     z-index: 5;
     opacity: 0;
@@ -1736,7 +1736,7 @@ img {
     width: 30px;
     text-align: center;
     font-size: 14px;
-    color: #202020;
+    color: #ffffff;
     cursor: pointer;
     z-index: 10;
     -webkit-transition: all 0.5s ease;
@@ -1785,13 +1785,13 @@ img {
     line-height: 24px;
     padding: 10px 20px;
     font-size: 15px;
-    color: #404040;
+    color: #afe1e3;
     text-transform: capitalize;
 }
 
 .mobile-menu .navigation li:hover>a,
 .mobile-menu .navigation li.current>a {
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .mobile-menu .navigation li.dropdown .dropdown-btn {

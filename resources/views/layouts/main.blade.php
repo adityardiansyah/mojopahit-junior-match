@@ -13,7 +13,7 @@
 <link href="{{asset('assets/frontend/plugins/revolution/css/navigation.css')}} " rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
 <link href="{{asset('assets/frontend/css/style.css')}} " rel="stylesheet">
 <link href="{{asset('assets/frontend/css/responsive.css')}} " rel="stylesheet">
-{{-- <link href="{{asset('assets/frontend/css/custom.css')}} " rel="stylesheet"> --}}
+<link href="{{asset('assets/frontend/css/custom.css')}} " rel="stylesheet">
 {{-- <link rel="icon" type="image/png" href="{{asset('assets/images/favicon.png')}}" /> --}}
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}" defer></script>
@@ -130,7 +130,7 @@
                         <div class="search-box-outer">
                             <div class="dropdown">
                                 <button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="flaticon-search-5"></span></button>
-                                <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
+                                <ul class="dropdown-menu pull-right search-panel wow fadeInUp" aria-labelledby="dropdownMenu3">
                                     <li class="panel-outer">
                                         <div class="form-container">
                                             <form method="post" action="http://t.commonsupport.xyz/industar/index.html">
@@ -199,7 +199,7 @@
                         <div class="footer-column">
                             <div class="footer-widget about-widget">
                                 <div class="footer-logo">
-                                    <div class="image wow fadeInUp" data-wow-delay="300ms"><a href=""><img src="{{asset('images/logo.png')}}"  alt="" title=""></a></div>
+                                    <div class="image wow fadeInUp" data-wow-delay="300ms"><a href=""><img src="{{asset('images/logo.png')}}" class="logos"  alt="" title=""></a></div>
                                 </div>
                                 <div class="widget-content">
                                 <div class="text wow fadeInLeft" data-wow-delay="400ms">
@@ -288,14 +288,6 @@
 <script src="{{asset('assets/frontend/js/jquery.js')}} "></script>
 <script src="{{asset('assets/frontend/js/popper.min.js')}} "></script>
 <script src="{{asset('assets/frontend/js/bootstrap.min.js')}} "></script>
-{{-- <script src="{{asset('assets/frontend/plugins/revolution/js/jquery.themepunch.revolution.min.js')}} "></script>
-<script src="{{asset('assets/frontend/plugins/revolution/js/jquery.themepunch.tools.min.js')}} "></script>
-<script src="{{asset('assets/frontend/plugins/revolution/js/extensions/revolution.extension.actions.min.js')}} "></script>
-<script src="{{asset('assets/frontend/plugins/revolution/js/extensions/revolution.extension.carousel.min.js')}} "></script>
-<script src="{{asset('assets/frontend/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js')}} "></script>
-<script src="{{asset('assets/frontend/plugins/revolution/js/extensions/revolution.extension.migration.min.js')}} "></script>
-<script src="{{asset('assets/frontend/plugins/revolution/js/extensions/revolution.extension.parallax.min.js')}} "></script> 
-<script src="{{asset('assets/frontend/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js')}} "></script> --}}
 <script src="{{asset('assets/frontend/js/jquery-ui.js')}} "></script>
 <script src="{{asset('assets/frontend/js/jquery.fancybox.js')}} "></script>
 <script src="{{asset('assets/frontend/js/owl.js')}} "></script>

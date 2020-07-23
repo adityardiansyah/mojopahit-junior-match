@@ -31,7 +31,6 @@
     <link href="{{ asset('assets/css/skins/brand/dark.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/css/skins/aside/dark.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/plugins/general/summernote/dist/summernote.css') }}" charset="utf-8" rel="stylesheet" type="text/css" />
-    {{-- <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet"> --}}
     <link rel="shortcut icon" href="{{ asset('assets/media/logos/favicon.ico') }}" />
     
     <!-- Scripts -->
@@ -296,7 +295,6 @@
 <script src="{{ asset('assets/plugins/general/popper.js/dist/umd/popper.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/general/select2/dist/js/select2.full.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/general/tooltip.js/dist/umd/tooltip.min.js') }}" type="text/javascript"></script>
-{{-- <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script> --}}
 <script src="{{ asset('assets/plugins/general/bootstrap/dist/js/bootstrap.min.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/general/js-cookie/src/js.cookie.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/general/moment/min/moment.min.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>

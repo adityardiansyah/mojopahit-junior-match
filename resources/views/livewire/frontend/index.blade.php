@@ -100,13 +100,13 @@
                                 <div class="auto-container">
                                     <div class="row">
                                         <div class="col-lg-4 col-md-4 col-sm-12">
-                                            <iframe src="https://www.youtube.com/embed/juoCHaHmxJA?feature=oembed&start&end&wmode=opaque&loop=0&controls=1&mute=0&rel=0&modestbranding=0" class="img-fluid wow fadeInUp" data-wow-delay="100ms" frameborder="0"></iframe>
+                                            <iframe src="https://www.youtube.com/embed/juoCHaHmxJA?feature=oembed&start&end&wmode=opaque&loop=0&controls=1&mute=0&rel=0&modestbranding=0" class="img-fluid video wow fadeInUp" data-wow-delay="100ms" frameborder="0"></iframe>
                                         </div>
                                         <div class="col-lg-4 col-md-4 col-sm-12">
-                                            <iframe src="https://www.youtube.com/embed/juoCHaHmxJA?feature=oembed&start&end&wmode=opaque&loop=0&controls=1&mute=0&rel=0&modestbranding=0" class="img-fluid wow fadeInUp" data-wow-delay="200ms" frameborder="0"></iframe>
+                                            <iframe src="https://www.youtube.com/embed/juoCHaHmxJA?feature=oembed&start&end&wmode=opaque&loop=0&controls=1&mute=0&rel=0&modestbranding=0" class="img-fluid video wow fadeInUp" data-wow-delay="200ms" frameborder="0"></iframe>
                                         </div>
                                         <div class="col-lg-4 col-md-4 col-sm-12">
-                                            <iframe src="https://www.youtube.com/embed/juoCHaHmxJA?feature=oembed&start&end&wmode=opaque&loop=0&controls=1&mute=0&rel=0&modestbranding=0" class="img-fluid wow fadeInUp" data-wow-delay="300ms" frameborder="0"></iframe>
+                                            <iframe src="https://www.youtube.com/embed/juoCHaHmxJA?feature=oembed&start&end&wmode=opaque&loop=0&controls=1&mute=0&rel=0&modestbranding=0" class="img-fluid video wow fadeInUp" data-wow-delay="300ms" frameborder="0"></iframe>
                                         </div>
                                     </div>
                                 </div>
@@ -119,13 +119,13 @@
                                 <div class="auto-container">
                                     <div class="row">
                                         <div class="col-lg-4 col-md-4 col-sm-12">
-                                            <img src="https://majapahitjuniormatch.com/wp-content/uploads/2020/06/Screenshot_20200604_143737-300x194.png" class="img-fluid wow fadeInUp" data-wow-delay="100ms" alt="">
+                                            <img src="https://majapahitjuniormatch.com/wp-content/uploads/2020/06/Screenshot_20200604_143737-300x194.png" class="img-fluid video wow fadeInUp" data-wow-delay="100ms" alt="">
                                         </div>
                                         <div class="col-lg-4 col-md-4 col-sm-12">
-                                            <img src="https://majapahitjuniormatch.com/wp-content/uploads/2020/06/a558a29a35f91fd3fa3eec71c81a9eac_754x-300x200.jpeg" class="img-fluid wow fadeInUp" data-wow-delay="200ms" alt="">                                            
+                                            <img src="https://majapahitjuniormatch.com/wp-content/uploads/2020/06/a558a29a35f91fd3fa3eec71c81a9eac_754x-300x200.jpeg" class="img-fluid video wow fadeInUp" data-wow-delay="200ms" alt="">                                            
                                         </div>
                                         <div class="col-lg-4 col-md-4 col-sm-12">
-                                            <img src="https://majapahitjuniormatch.com/wp-content/uploads/2020/06/5d77c5ba017f2.jpg" class="img-fluid wow fadeInUp" data-wow-delay="300ms" alt="">                                            
+                                            <img src="https://majapahitjuniormatch.com/wp-content/uploads/2020/06/5d77c5ba017f2.jpg" class="img-fluid video wow fadeInUp" data-wow-delay="300ms" alt="">                                            
                                         </div>
                                     </div>
                                 </div>
@@ -161,7 +161,7 @@
                                     <!-- Blog Category -->
                                     <img src="https://majapahitjuniormatch.com/wp-content/uploads/2020/06/JULI-FIX-IG-FLAYER1-820x1024.png" class="img-fluid wow fadeInUp" data-wow-delay="300ms" alt="">
                                     <br><br>
-                                    <iframe src="https://www.youtube.com/embed/juoCHaHmxJA?feature=oembed&start&end&wmode=opaque&loop=0&controls=1&mute=0&rel=0&modestbranding=0" class="img-fluid wow fadeInUp" data-wow-delay="400ms" frameborder="0"></iframe>
+                                    <iframe src="https://www.youtube.com/embed/juoCHaHmxJA?feature=oembed&start&end&wmode=opaque&loop=0&controls=1&mute=0&rel=0&modestbranding=0" class="img-fluid video wow fadeInUp" data-wow-delay="400ms" frameborder="0"></iframe>
                                 </div>
                             </div>
                         </aside>
