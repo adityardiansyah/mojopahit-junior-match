@@ -16,7 +16,7 @@
 <link href="{{asset('assets/frontend/css/custom.css')}} " rel="stylesheet">
 {{-- <link rel="icon" type="image/png" href="{{asset('assets/images/favicon.png')}}" /> --}}
 <!-- Scripts -->
-<script src="{{ asset('js/app.js') }}" defer></script>
+<script src="{{ asset('public/js/app.js') }}" defer></script>
 <style>
 
 </style>
@@ -104,21 +104,21 @@
                             <ul class="navigation clearfix">
                                 <li><a href="{{ url('/')}}">Beranda</a></li>
                                 <li><a href="{{ url('/tentang-kami')}}">Tentang Kami</a></li>
-                                <li class="dropdown"><a href="services.html">Kompetisi</a>
+                                <li class="dropdown"><a href="#">Kompetisi</a>
                                     <ul>
-                                        <li><a href="services.html">League</a></li>
-                                        <li><a href="services-2.html">Cup</a></li>
+                                        <li><a href="{{ url('/league')}}">League</a></li>
+                                        <li><a href="{{ url('/cup')}}">Cup</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="contact.html">List Club</a></li>
-                                <li class="dropdown"><a href="services.html">Blog</a>
+                                <li><a href="{{ url('/club')}}">List Club</a></li>
+                                <li class="dropdown"><a href="#">Blog</a>
                                     <ul>
-                                        <li><a href="services.html">Berita</a></li>
-                                        <li><a href="services-2.html">Video</a></li>
-                                        <li><a href="services-2.html">Galeri</a></li>
+                                        <li><a href="{{ url('/blog')}}">Berita</a></li>
+                                        <li><a href="{{ url('/video')}}">Video</a></li>
+                                        <li><a href="{{ url('/galeri')}}">Galeri</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="contact.html">Hubungi Kami</a></li>
+                                <li><a href="{{ url('/hubungi-kami')}}">Hubungi Kami</a></li>
                             </ul>
                         </div>
                     </nav>
