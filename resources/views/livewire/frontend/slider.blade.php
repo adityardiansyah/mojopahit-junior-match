@@ -82,25 +82,13 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="https://majapahitjuniormatch.com/wp-content/uploads/2020/06/5-1-of-1-scaled.jpg" alt="First slide">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Ini Pertama</h5>
-                    <p>Iya ini memang pertama</p>
-                </div>
+                <img class="d-block w-100" src="{{ asset('images/banner1.jpg')}}" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="https://majapahitjuniormatch.com/wp-content/uploads/2020/06/4-1-of-1-scaled.jpg" alt="First slide">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Ini Kedua</h5>
-                    <p>Ini bukan yang pertama lagi atu</p>
-                </div>
+                <img class="d-block w-100" src="{{ asset('images/banner2.jpg')}}" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="https://majapahitjuniormatch.com/wp-content/uploads/2020/06/8-1-of-1-scaled.jpg" alt="First slide">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Ini Ketiga</h5>
-                    <p>Iya ini memang yang ketiga bro, jangan ngeyel</p>
-                </div>
+                <img class="d-block w-100" src="{{ asset('images/banner3.jpg')}}" alt="First slide">
             </div>
             
         </div>

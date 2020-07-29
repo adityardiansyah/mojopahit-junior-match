@@ -24,7 +24,7 @@
 </style>
 <div>
     <!--Page Title-->
-    <section class="page-banner" style="background-image:url(https://majapahitjuniormatch.com/wp-content/uploads/2020/06/5-1-of-1-scaled.jpg);">
+    <section class="page-banner" style="background-image:url({{asset('images/headerpage.jpg')}});">
         <div class="auto-container">
             <div class="inner-container clearfix">
                 <h1>TENTANG KAMI</h1>

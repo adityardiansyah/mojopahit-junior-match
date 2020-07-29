@@ -7,13 +7,13 @@
 
 <!-- Stylesheets -->
 
-<link href="{{asset('assets/frontend/css/bootstrap.css')}} " rel="stylesheet">
-<link href="{{asset('assets/frontend/plugins/revolution/css/settings.css')}} " rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
-<link href="{{asset('assets/frontend/plugins/revolution/css/layers.css')}} " rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
-<link href="{{asset('assets/frontend/plugins/revolution/css/navigation.css')}} " rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
-<link href="{{asset('assets/frontend/css/style.css')}} " rel="stylesheet">
-<link href="{{asset('assets/frontend/css/responsive.css')}} " rel="stylesheet">
-<link href="{{asset('assets/frontend/css/custom.css')}} " rel="stylesheet">
+<link href="{{asset('public/assets/frontend/css/bootstrap.css')}} " rel="stylesheet">
+<link href="{{asset('public/assets/frontend/plugins/revolution/css/settings.css')}} " rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
+<link href="{{asset('public/assets/frontend/plugins/revolution/css/layers.css')}} " rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
+<link href="{{asset('public/assets/frontend/plugins/revolution/css/navigation.css')}} " rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
+<link href="{{asset('public/assets/frontend/css/style.css')}} " rel="stylesheet">
+<link href="{{asset('public/assets/frontend/css/responsive.css')}} " rel="stylesheet">
+<link href="{{asset('public/assets/frontend/css/custom.css')}} " rel="stylesheet">
 {{-- <link rel="icon" type="image/png" href="{{asset('assets/images/favicon.png')}}" /> --}}
 <!-- Scripts -->
 <script src="{{ asset('public/js/app.js') }}" defer></script>
@@ -285,16 +285,16 @@
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
 <!--Scroll to top-->
 <livewire:scripts>
-<script src="{{asset('assets/frontend/js/jquery.js')}} "></script>
-<script src="{{asset('assets/frontend/js/popper.min.js')}} "></script>
-<script src="{{asset('assets/frontend/js/bootstrap.min.js')}} "></script>
-<script src="{{asset('assets/frontend/js/jquery-ui.js')}} "></script>
-<script src="{{asset('assets/frontend/js/jquery.fancybox.js')}} "></script>
-<script src="{{asset('assets/frontend/js/owl.js')}} "></script>
-<script src="{{asset('assets/frontend/js/wow.js')}} "></script>
-<script src="{{asset('assets/frontend/js/isotope.js')}} "></script>
-<script src="{{asset('assets/frontend/js/appear.js')}} "></script>
-<script src="{{asset('assets/frontend/js/script.js')}} "></script>
+<script src="{{asset('public/assets/frontend/js/jquery.js')}} "></script>
+<script src="{{asset('public/assets/frontend/js/popper.min.js')}} "></script>
+<script src="{{asset('public/assets/frontend/js/bootstrap.min.js')}} "></script>
+<script src="{{asset('public/assets/frontend/js/jquery-ui.js')}} "></script>
+<script src="{{asset('public/assets/frontend/js/jquery.fancybox.js')}} "></script>
+<script src="{{asset('public/assets/frontend/js/owl.js')}} "></script>
+<script src="{{asset('public/assets/frontend/js/wow.js')}} "></script>
+<script src="{{asset('public/assets/frontend/js/isotope.js')}} "></script>
+<script src="{{asset('public/assets/frontend/js/appear.js')}} "></script>
+<script src="{{asset('public/assets/frontend/js/script.js')}} "></script>
 @yield('js')
 <script>
     if($('.mobile-menu').length){

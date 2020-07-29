@@ -10,31 +10,31 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
 
-    <link href="{{ asset('assets/plugins/general/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/plugins/general/tether/dist/css/tether.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/plugins/general/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/plugins/general/bootstrap-timepicker/css/bootstrap-timepicker.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/plugins/general/bootstrap-select/dist/css/bootstrap-select.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/plugins/general/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/plugins/general/select2/dist/css/select2.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/plugins/general/animate.css/animate.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/plugins/general/toastr/build/toastr.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/plugins/general/sweetalert2/dist/sweetalert2.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/plugins/general/socicon/css/socicon.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/plugins/general/plugins/line-awesome/css/line-awesome.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/plugins/general/plugins/flaticon/flaticon.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/plugins/general/plugins/flaticon2/flaticon.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/plugins/general/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/css/skins/header/base/light.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/css/skins/header/menu/light.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/css/skins/brand/dark.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/css/skins/aside/dark.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/plugins/general/summernote/dist/summernote.css') }}" charset="utf-8" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/assets/plugins/general/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/assets/plugins/general/tether/dist/css/tether.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/assets/plugins/general/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/assets/plugins/general/bootstrap-timepicker/css/bootstrap-timepicker.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/assets/plugins/general/bootstrap-select/dist/css/bootstrap-select.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/assets/plugins/general/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/assets/plugins/general/select2/dist/css/select2.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/assets/plugins/general/animate.css/animate.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/assets/plugins/general/toastr/build/toastr.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/assets/plugins/general/sweetalert2/dist/sweetalert2.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/assets/plugins/general/socicon/css/socicon.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/assets/plugins/general/plugins/line-awesome/css/line-awesome.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/assets/plugins/general/plugins/flaticon/flaticon.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/assets/plugins/general/plugins/flaticon2/flaticon.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/assets/plugins/general/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/assets/css/skins/header/base/light.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/assets/css/skins/header/menu/light.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/assets/css/skins/brand/dark.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/assets/css/skins/aside/dark.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/assets/plugins/general/summernote/dist/summernote.css') }}" charset="utf-8" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" href="{{ asset('assets/media/logos/favicon.ico') }}" />
     
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('public/js/app.js') }}" defer></script>
     <style>
         .toast .toast-message{
             font-size: 1.1rem;
@@ -71,7 +71,6 @@
             border-radius: 4px;
             font-size: 13px;
         }
-        
     </style>
 
     @stack('styles')
@@ -151,6 +150,15 @@
                             @endif --}}
                             <li class="kt-menu__item @if($menu_active == 'dashboard') kt-menu__item--here @endif" aria-haspopup="true">
                                 <a href="{{ url('/admin') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-home-1"></i><span class="kt-menu__link-text">Dashboard</span></a>
+                            </li>
+                            <li class="kt-menu__item @if($menu_active == 'slider') kt-menu__item--here @endif" aria-haspopup="true">
+                                <a href="{{ url('/admin/slider') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-map"></i><span class="kt-menu__link-text">Slider</span></a>
+                            </li>
+                            <li class="kt-menu__item @if($menu_active == 'galeri') kt-menu__item--here @endif" aria-haspopup="true">
+                                <a href="{{ url('/admin/galeri') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-folder-1"></i><span class="kt-menu__link-text">Galeri</span></a>
+                            </li>
+                            <li class="kt-menu__item @if($menu_active == 'video') kt-menu__item--here @endif" aria-haspopup="true">
+                                <a href="{{ url('/admin/video') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon fa fa-video"></i><span class="kt-menu__link-text">Video</span></a>
                             </li>
                             <li class="kt-menu__item @if($menu_active == 'clublist') kt-menu__item--here @endif" aria-haspopup="true">
                                 <a href="{{ url('/admin/list-club') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-list-1"></i><span class="kt-menu__link-text">List Club</span></a>
@@ -289,32 +297,32 @@
     };
 </script>
 
-<script src="{{ asset('assets/plugins/general/jquery/dist/jquery.js') }}"  type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/summernote/dist/summernote.js') }}" charset="utf-8" type="text/javascript"></script>
-<script src="{{ asset('assets/js/scripts.bundle.js') }}" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/popper.js/dist/umd/popper.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/select2/dist/js/select2.full.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/tooltip.js/dist/umd/tooltip.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/bootstrap/dist/js/bootstrap.min.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/js-cookie/src/js.cookie.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/moment/min/moment.min.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/perfect-scrollbar/dist/perfect-scrollbar.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/sticky-js/dist/sticky.min.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/wnumb/wNumb.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/jquery-form/dist/jquery.form.min.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/block-ui/jquery.blockUI.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/js/global/integration/plugins/bootstrap-datepicker.init.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/bootstrap-timepicker/js/bootstrap-timepicker.min.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/js/global/integration/plugins/bootstrap-timepicker.init.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/bootstrap-maxlength/src/bootstrap-maxlength.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/bootstrap-select/dist/js/bootstrap-select.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/bootstrap-switch/dist/js/bootstrap-switch.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/js/global/integration/plugins/bootstrap-switch.init.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/autosize/dist/autosize.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/toastr/build/toastr.min.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/sweetalert2/dist/sweetalert2.min.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/general/js/global/integration/plugins/sweetalert2.init.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
+<script src="{{ asset('public/assets/plugins/general/jquery/dist/jquery.js') }}"  type="text/javascript"></script>
+<script src="{{ asset('public/assets/plugins/general/summernote/dist/summernote.js') }}" charset="utf-8" type="text/javascript"></script>
+<script src="{{ asset('public/assets/js/scripts.bundle.js') }}" type="text/javascript"></script>
+<script src="{{ asset('public/assets/plugins/general/popper.js/dist/umd/popper.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
+<script src="{{ asset('public/assets/plugins/general/select2/dist/js/select2.full.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
+<script src="{{ asset('public/assets/plugins/general/tooltip.js/dist/umd/tooltip.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('public/assets/plugins/general/bootstrap/dist/js/bootstrap.min.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
+<script src="{{ asset('public/assets/plugins/general/js-cookie/src/js.cookie.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
+<script src="{{ asset('public/assets/plugins/general/moment/min/moment.min.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
+<script src="{{ asset('public/assets/plugins/general/perfect-scrollbar/dist/perfect-scrollbar.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
+<script src="{{ asset('public/assets/plugins/general/sticky-js/dist/sticky.min.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
+<script src="{{ asset('public/assets/plugins/general/wnumb/wNumb.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
+<script src="{{ asset('public/assets/plugins/general/jquery-form/dist/jquery.form.min.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
+<script src="{{ asset('public/assets/plugins/general/block-ui/jquery.blockUI.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
+<script src="{{ asset('public/assets/plugins/general/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
+<script src="{{ asset('public/assets/plugins/general/js/global/integration/plugins/bootstrap-datepicker.init.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
+<script src="{{ asset('public/assets/plugins/general/bootstrap-timepicker/js/bootstrap-timepicker.min.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
+<script src="{{ asset('public/assets/plugins/general/js/global/integration/plugins/bootstrap-timepicker.init.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
+<script src="{{ asset('public/assets/plugins/general/bootstrap-maxlength/src/bootstrap-maxlength.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
+<script src="{{ asset('public/assets/plugins/general/bootstrap-select/dist/js/bootstrap-select.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
+<script src="{{ asset('public/assets/plugins/general/bootstrap-switch/dist/js/bootstrap-switch.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
+<script src="{{ asset('public/assets/plugins/general/js/global/integration/plugins/bootstrap-switch.init.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
+<script src="{{ asset('public/assets/plugins/general/autosize/dist/autosize.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
+<script src="{{ asset('public/assets/plugins/general/toastr/build/toastr.min.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
+<script src="{{ asset('public/assets/plugins/general/sweetalert2/dist/sweetalert2.min.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
+<script src="{{ asset('public/assets/plugins/general/js/global/integration/plugins/sweetalert2.init.js') }}" data-turbolinks-eval="true" type="text/javascript"></script>
 
 {{-- <script src="{{ asset('assets/js/autoNumeric.js') }}" data-turbolinks-eval="true" type="text/javascript"></script> --}}
 <script>
