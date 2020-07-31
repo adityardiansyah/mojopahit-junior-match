@@ -1,11 +1,11 @@
 @section('title')
-    Galeri
+    Video
 @endsection
 <div>
     <div class="kt-subheader   kt-grid__item" id="kt_subheader">
         <div class="kt-container  kt-container--fluid ">
             <div class="kt-subheader__main">
-                <h3 class="kt-subheader__title">Galeri</h3>
+                <h3 class="kt-subheader__title">Video</h3>
                 <span class="kt-subheader__separator kt-subheader__separator--v"></span>
             </div>
         </div>
@@ -41,9 +41,9 @@
                     <div class="kt-portlet__body pt-2">
                         
                         @if($statusUpdate)
-                        <livewire:admin.gallery-update />
+                        <livewire:admin.video-update />
                         @else
-                        <livewire:admin.gallery-create />
+                        <livewire:admin.video-create />
                         @endif
                     </div>
                 </div>
@@ -51,14 +51,15 @@
             <div class="col-md-6">
                 <div class="kt-portlet kt-portlet--mobile">
                     <div class="kt-portlet__body pt-2">
-                        <div class="kt-heading kt-heading--md">Data Galeri</div>
+                        <div class="kt-heading kt-heading--md">Data Video</div>
                         <div class="table-responsive" >
                             <table class="table mb-0">
                                 <thead>
                                 <tr>
                                     <th width="5%">#</th>
                                     <th>Judul</th>
-                                    <th>Gambar</th>
+                                    <th>Video Team</th>
+                                    <th>Embed</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
@@ -69,8 +70,11 @@
                                         <td>
                                             <b>{{ $item->title }}</b>
                                         </td>
-                                        <td width="300px">
-                                            <img src="{{ asset('storage/'.$item->image)}}" class="img-fluid" alt="">
+                                        <td>
+                                            {{ $item->team->name }} <b>VS</b> {{ $item->team2->name }}
+                                        </td>
+                                        <td>
+                                            <a href="{{ $item->embed }}" target="_blank">Lihat Video</a>
                                         </td>
                                         <td>
                                             <button wire:click="delete({{$item->id}})" onclick="deleteData({{$item->id}}) || event.stopImmediatePropagation()" data-toggle="tooltip" data-placement="top" title="Hapus" id="button" type="button" class="btn btn-hover-danger btn-elevate-hover btn-icon btn-sm btn-icon-md btn-circle">

@@ -154,8 +154,8 @@
                             <li class="kt-menu__item @if($menu_active == 'slider') kt-menu__item--here @endif" aria-haspopup="true">
                                 <a href="{{ url('/admin/slider') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-map"></i><span class="kt-menu__link-text">Slider</span></a>
                             </li>
-                            <li class="kt-menu__item @if($menu_active == 'galeri') kt-menu__item--here @endif" aria-haspopup="true">
-                                <a href="{{ url('/admin/galeri') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-folder-1"></i><span class="kt-menu__link-text">Galeri</span></a>
+                            <li class="kt-menu__item @if($menu_active == 'gallery') kt-menu__item--here @endif" aria-haspopup="true">
+                                <a href="{{ url('/admin/gallery') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-folder-1"></i><span class="kt-menu__link-text">Galeri</span></a>
                             </li>
                             <li class="kt-menu__item @if($menu_active == 'video') kt-menu__item--here @endif" aria-haspopup="true">
                                 <a href="{{ url('/admin/video') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon fa fa-video"></i><span class="kt-menu__link-text">Video</span></a>

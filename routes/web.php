@@ -40,6 +40,10 @@ Route::group(['middleware' => 'auth'], function(){
     Route::livewire('/admin/category','admin.category')->layout('layouts.admin')->name('admin.category');
 
     Route::livewire('/admin/slider','admin.slider')->layout('layouts.admin')->name('admin.slider');
+
+    Route::livewire('/admin/gallery','admin.gallery')->layout('layouts.admin')->name('admin.gallery');
+
+    Route::livewire('/admin/video','admin.video')->layout('layouts.admin')->name('admin.video');
 });
 
 Route::livewire('/','frontend.index')->layout('layouts.main')->name('index');
