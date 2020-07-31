@@ -27,12 +27,23 @@
                             <input type="text" class="form-control" id="embed" wire:model="embed" autocomplete="off" placeholder="ex: https://www.youtube.com/embed/juoCHaHmxJA?feature=oembed&start&end&wmode=opaque&loop=0&controls=1&mute=0&rel=0&modestbranding=0">
                         </div>
                         <div class="form-group">
-                            <label for="">Nama Team</label>
+                            <label for="">Nama Team Pertama</label>
                             <div wire:ignore>
-                                <select name="team_id" id="" class="select-2 form-control" wire:model="team_id">
+                                <select name="team_id" id="team1" class="select-2 form-control" wire:model="team_id">
                                     <option value="0">Tidak ada team</option>
                                     @foreach ($team as $item)
-                                        <option value="{{$item->id}}" @if($item->id == $team_id) selected @endif>{{ $item->name }}</option>
+                                        <option value="{{$item->id}}">{{ $item->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Nama Team Kedua</label>
+                            <div wire:ignore>
+                                <select name="team2_id" id="team2" class="select-2 form-control" wire:model="team2_id">
+                                    <option value="0">Tidak ada team</option>
+                                    @foreach ($team as $item)
+                                        <option value="{{$item->id}}">{{ $item->name }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -50,8 +61,11 @@
 @push('scripts')
     <script>
         $('.select-2').select2();
-        $('.select-2').on('change', function (e) {
+        $('#team1').on('change', function (e) {
             @this.set('team_id', e.target.value);
+        });
+        $('#team2').on('change', function (e) {
+            @this.set('team2_id', e.target.value);
         });
     </script>
 @endpush
