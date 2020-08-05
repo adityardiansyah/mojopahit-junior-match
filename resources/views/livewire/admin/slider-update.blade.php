@@ -18,9 +18,23 @@
                 @csrf
                 <div class="row">
                     <div class="col-md-12">
-                        <label for="image">Gambar</label>
-                        <img src="{{ asset('storage/'.$image_slider) }}" class="img-fluid" alt="">
-                        <input type="file" wire:model="image" name="image" id="image" class="form-control">
+                        <div class="form-group">
+                            <label for="image">Gambar</label>
+                            <img src="{{ asset('storage/'.$image_slider) }}" class="img-fluid" alt="">
+                            <input type="file" wire:model="image" name="image" id="image" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="text_big">Judul</label>
+                            <input type="text" class="form-control" id="text_big" wire:model="text_big" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <label for="text_small">Keterangan</label>
+                            <input type="text" class="form-control" id="text_small" wire:model="text_small" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <label for="link">Link</label>
+                            <input type="text" class="form-control" id="link" wire:model="link" autocomplete="off">
+                        </div>
                     </div>
                 </div>
             </table>

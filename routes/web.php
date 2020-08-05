@@ -49,6 +49,7 @@ Route::group(['middleware' => 'auth'], function(){
 Route::livewire('/','frontend.index')->layout('layouts.main')->name('index');
 Route::livewire('/tentang-kami','frontend.about')->layout('layouts.main')->name('about');
 Route::livewire('/blog','frontend.blog')->layout('layouts.main')->name('blog');
+Route::livewire('/artikel/{slug}','frontend.detail-article')->layout('layouts.main')->name('detail-article');
 Route::livewire('/video','frontend.video')->layout('layouts.main')->name('video');
 Route::livewire('/galeri','frontend.galeri')->layout('layouts.main')->name('galeri');
 Route::livewire('/club','frontend.club')->layout('layouts.main')->name('club');

@@ -63,9 +63,6 @@
                                     <button wire:click="edit({{$item->id}})" data-toggle="tooltip" data-placement="top" title="Edit" type="button" class="btn btn-hover-brand btn-elevate-hover btn-icon btn-sm btn-icon-md btn-circle">
                                         <i class="la la-pencil"></i>
                                     </button>
-                                    <button wire:click="$emit('add_player',{{$item->id}})" data-toggle="tooltip" data-placement="top" title="Tambahkan Pemain" type="button" class="btn btn-hover-primary btn-elevate-hover btn-icon btn-sm btn-icon-md btn-circle">
-                                        <i class="la la-user-plus"></i>
-                                    </button>
                                 </td>
                             </tr>
                             @empty

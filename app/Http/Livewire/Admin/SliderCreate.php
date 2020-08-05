@@ -10,6 +10,9 @@ class SliderCreate extends Component
 {
     use WithFileUploads;
     public $image;
+    public $text_big;
+    public $text_small;
+    public $link;
 
     public function render()
     {
@@ -19,17 +22,23 @@ class SliderCreate extends Component
     public function store()
     {
         $validatedData = $this->validate([
-            'image' => 'image|mimes:jpeg,png,jpg|max:2048',
+            'image' => 'image|mimes:jpeg,png,jpg|max:8192',
         ],
         [
             'image.image' => 'Harus bentuk Gambar',
             'image.mimes' => 'Gambar harus bentuk jpeg, png, jpg',
-            'image.max' => 'Maksimal Gambar berukuran 5MB' 
+            'image.max' => 'Maksimal Gambar berukuran 8MB' 
         ]);
         $image = $this->image->store("slider",'public');
+        $text = [
+            'title' => $this->text_big,
+            'sub_title' => $this->text_small,
+            'link' => $this->link
+        ];
 
         $data = Slider::create([
-            'image' => $image
+            'image' => $image,
+            'text' => json_encode($text)
         ]);
 
         $this->resetInput();
@@ -40,5 +49,8 @@ class SliderCreate extends Component
     public function resetInput()
     {
         $this->image = null;
+        $this->text_big = null;
+        $this->text_small = null;
+        $this->link = null;
     }
 }

@@ -57,6 +57,7 @@
                                 <thead>
                                 <tr>
                                     <th width="5%">#</th>
+                                    <th>Judul</th>
                                     <th>Gambar</th>
                                     <th>Action</th>
                                 </tr>
@@ -65,6 +66,11 @@
                                     @forelse ($data as $key => $item)
                                     <tr>
                                         <td>{{ $key+1 }}</td>
+                                        <td>
+                                            <b>{{ $item->title }}</b><br>
+                                            {{ $item->sub_title }} <br>
+                                            Link : {{ $item->link }}
+                                        </td>
                                         <td width="300px"><img src="{{ asset('storage/'.$item->image)}}" class="img-fluid" alt=""></td>
                                         <td>
                                             <button wire:click="delete({{$item->id}})" onclick="deleteData({{$item->id}}) || event.stopImmediatePropagation()" data-toggle="tooltip" data-placement="top" title="Hapus" id="button" type="button" class="btn btn-hover-danger btn-elevate-hover btn-icon btn-sm btn-icon-md btn-circle">

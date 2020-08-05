@@ -31,7 +31,7 @@
     <link href="{{ asset('public/assets/css/skins/brand/dark.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('public/assets/css/skins/aside/dark.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('public/assets/plugins/general/summernote/dist/summernote.css') }}" charset="utf-8" rel="stylesheet" type="text/css" />
-    <link rel="shortcut icon" href="{{ asset('assets/media/logos/favicon.ico') }}" />
+    <link rel="shortcut icon" href="{{ asset('public/images/favicon.ico') }}" />
     
     <!-- Scripts -->
     <script src="{{ asset('public/js/app.js') }}" defer></script>
@@ -170,7 +170,9 @@
                                 <a class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-trophy"></i><span class="kt-menu__link-text">Kompetisi</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                 <div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
                                     <ul class="kt-menu__subnav">
-                                        <li class="kt-menu__item" aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Liga</span></a></li>
+                                        <li class="kt-menu__item" aria-haspopup="true">
+                                            <a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Liga</span></a>
+                                        </li>
                                         <li class="kt-menu__item" aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Cup</span></a></li>
                                     </ul>
                                 </div>
@@ -180,10 +182,10 @@
                                 <div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
                                     <ul class="kt-menu__subnav">
                                         <li class="kt-menu__item @if($menu_active == 'article') kt-menu__item--here @endif" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
-                                            <a href="{{ url('/admin/article') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"></i><span class="kt-menu__link-text">Data Artikel</span></a>
+                                            <a href="{{ url('/admin/article') }}" class="kt-menu__link"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Data Artikel</span></a>
                                         </li>
                                         <li class="kt-menu__item @if($menu_active == 'category') kt-menu__item--here @endif" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
-                                            <a href="{{ url('/admin/category') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"></i><span class="kt-menu__link-text">Kategori</span></a>
+                                            <a href="{{ url('/admin/category') }}" class="kt-menu__link"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Kategori</span></a>
                                         </li>    
                                     </ul>
                                 </div>
@@ -193,14 +195,11 @@
                                 <a class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-users"></i><span class="kt-menu__link-text">Informasi Perusahaan</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                 <div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
                                     <ul class="kt-menu__subnav">
-                                        <li class="kt-menu__item @if($menu_active == 'information') kt-menu__item--here @endif" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
-                                            <a href="{{ url('/admin/information') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"></i><span class="kt-menu__link-text">Informasi</span></a>
-                                        </li>
                                         <li class="kt-menu__item @if($menu_active == 'about') kt-menu__item--here @endif" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
-                                            <a href="{{ url('/admin/page/about') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"></i><span class="kt-menu__link-text">Tentang Kami</span></a>
+                                            <a href="{{ url('/admin/page/about') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Tentang Kami</span></a>
                                         </li>
                                         <li class="kt-menu__item @if($menu_active == 'contact') kt-menu__item--here @endif" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
-                                            <a href="{{ url('/admin/page/contact') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"></i><span class="kt-menu__link-text">Informasi Kami</span></a>
+                                            <a href="{{ url('/admin/page/contact') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Informasi Kami</span></a>
                                         </li>
                                     </ul>
                                 </div>

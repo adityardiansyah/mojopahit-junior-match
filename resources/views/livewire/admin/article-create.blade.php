@@ -77,7 +77,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="">Tanggal Publish</label>
-                                            <input type="text" class="form-control" name="published_at" required id="datepicker" data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" autocomplete="off">
+                                            <input type="date" class="form-control" wire:model="published_at" name="published_at" required autocomplete="off">
                                         </div>
                                         <div class="form-group">
                                             <label for="status">Publish ?</label>
@@ -118,6 +118,14 @@
 </div>
 @push('scripts')
     <script type="text/javascript">
+        $('.datepicker').datepicker({
+            format: 'dd-mm-yyyy',
+            autoclose: true,
+            todayHighlight: true,
+            }).on('changeDate', function(e){
+                console.log(e);
+            @this.set('published_at', $('#datepicker').val());
+        });
         $('.summernote').summernote({
             tabsize: 2,
             height: 450,
@@ -138,12 +146,6 @@
         });
         $('.dropdown-toggle').dropdown()
 
-        $('#datepicker').datepicker({
-            format: 'dd-mm-yyyy',
-            autoclose: true,
-            todayHighlight: true,
-            }).on('changeDate', function(e){
-            @this.set('published_at', $('#datepicker').val());
-        });
+        
     </script>
 @endpush

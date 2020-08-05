@@ -22,9 +22,14 @@ class Slider extends Component
 
     public function render()
     {
-        return view('livewire.admin.slider', [
-            'data' => Slide::latest()->get()
-        ]);
+        $data = Slide::latest()->get();
+        foreach($data as $key => $item){
+            $pisah = json_decode($item->text, true);
+            $item->title = $pisah['title'];
+            $item->sub_title = $pisah['sub_title'];
+            $item->link = $pisah['link'];
+        }
+        return view('livewire.admin.slider', compact('data'));
     }
 
 
@@ -56,6 +61,10 @@ class Slider extends Component
         if($id){
             $this->statusUpdate = true;
             $cek = Slide::find($id);
+            $pisah = json_decode($cek->text, true);
+            $cek->title = $pisah['title'];
+            $cek->sub_title = $pisah['sub_title'];
+            $cek->link = $pisah['link'];
             $this->emit('dataEditSlider', $cek);
         }
     }

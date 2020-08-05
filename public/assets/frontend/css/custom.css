@@ -1,4 +1,179 @@
-@media only screen and (max-width: 1023px) {
+.gradient {
+  height: 400px;
+  position: absolute;
+  right: 0;
+  bottom: 170px;
+  left: 0;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(rgba(255, 255, 255, 0), #010914);
+  /* Standard syntax */
+
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0), #010914);
+  /* For Safari 5.1 to 6.0 */
+
+  background: -o-linear-gradient(rgba(255, 255, 255, 0), #010914);
+  /* For Opera 11.1 to 12.0 */
+
+  background: -moz-linear-gradient(rgba(255, 255, 255, 0), #010914);
+}
+
+.carousel-indicators {
+  bottom: 120px;
+  z-index: 20;
+}
+
+.carousel {
+  background: #010914;
+  top: 0;
+  height: 700px;
+  overflow: hidden;
+}
+
+.slider-caption {
+  position: absolute;
+  top: 50px;
+  color: #fff;
+  z-index: 20;
+}
+
+.slider-h1 {
+  font-size: 55pt;
+  font-weight: 900;
+  letter-spacing: 8px;
+}
+
+.slider-h2 {
+  font-size: 35pt;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.slider-btn {
+  background: yellow;
+  padding: 14px 44px;
+  border-radius: 8px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.carousel-control-prev {
+  z-index: 20;
+}
+
+.carousel-control-next {
+  z-index: 20;
+}
+
+.slider-btn-info {
+  background: transparent;
+  padding: 30px 66px;
+  border-radius: 8px;
+  font-weight: 700;
+  margin-top: 12px;
+  border: 2px solid yellow;
+  color: yellow;
+  font-size: 20pt;
+  position: relative;
+  top: 100px;
+  right: -180px;
+}
+
+@media only screen and (max-width: 2560px) {
+  .carousel {
+    height: 1000px;
+  }
+
+  .gradient {
+    height: 600px;
+    bottom: 200;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .gradient {
+    height: 800px;
+  }
+
+  .carousel {
+    height: 600px;
+  }
+
+  .slider-caption {
+    top: 350px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .slider-btn-info {
+    top: 120px;
+    right: -180px;
+    padding: 21px 35px;
+    font-size: 16pt;
+  }
+
+  .carousel {
+    height: 500px;
+  }
+
+  .slider-caption {
+    top: 234px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .carousel {
+    height: 560px;
+  }
+
+  .main-header .header-lower {
+    position: absolute;
+  }
+
+  .main-menu .navigation>li {
+    padding: 14px 14px;
+  }
+
+  .main-menu .navigation>li:before {
+    top: 17px;
+    height: 20px;
+  }
+
+  .main-menu .navbar-collapse {
+    padding: 6px;
+  }
+
+  .gradient {
+    bottom: 0;
+  }
+
+  .slider-h1 {
+    font-size: 40pt;
+  }
+
+  .slider-h2 {
+    font-size: 22pt;
+  }
+
+  .slider-caption {
+    top: 299px;
+  }
+
+  .slider-btn-info {
+    top: 79px;
+    right: -103px;
+    padding: 23px 30px;
+    font-size: 14pt;
+  }
+
+  .sidebar-page-container {
+    padding: 0 0px 50px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
   .main-header .header-lower {
     background: #00132d;
   }
@@ -52,7 +227,7 @@
   }
 
   .logos {
-    height: 60px!important;
+    height: 60px !important;
   }
 }
 

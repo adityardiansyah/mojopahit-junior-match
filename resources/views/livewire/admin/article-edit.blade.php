@@ -79,7 +79,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="">Tanggal Publish</label>
-                                            <input type="text" class="form-control" wire:model="published_at" name="published_at" required id="datepicker" data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" autocomplete="off">
+                                            <input type="date" class="form-control" wire:model="published_at" name="published_at" required autocomplete="off">
                                         </div>
                                         <div class="form-group">
                                             <label for="status">Publish ?</label>
