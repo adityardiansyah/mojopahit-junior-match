@@ -9793,6 +9793,42 @@ a.ui-button:active,
     padding-bottom: 0;
 }
 
+.blog-categories-white {
+    position: relative;
+}
+
+.blog-categories-white li {
+    position: relative;
+}
+
+.blog-categories-white li a {
+    position: relative;
+    color: #e4e4e4;
+    font-size: 16px;
+    padding: 16px 0;
+    display: block;
+    font-family: "Roboto", sans-serif;
+    border-bottom: 1px solid #e5e5e5;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.blog-categories-white li a:hover {
+    color: #ffffff;
+}
+
+.blog-categories-white li:first-child a {
+    padding-top: 0;
+}
+
+.blog-categories-white li:last-child a {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
 /*Post Widget*/
 
 .sidebar .popular-posts .post {

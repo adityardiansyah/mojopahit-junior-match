@@ -23,7 +23,7 @@
                                             <div class="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
                                                 <div class="inner-box">
                                                     <div class="image-box">
-                                                    <figure class="image"><a href="#"><img src="{{ asset('storage/'.$item->image) }}" alt=""></a></figure>
+                                                    <figure class="image"><a href="{{ url('artikel/'.$item->slug) }}"><img src="{{ asset('storage/'.$item->image) }}" alt=""></a></figure>
                                                     </div>
                                                     <div class="lower-content">
                                                         <ul class="post-info">
@@ -100,7 +100,7 @@
                                 </div>
                                 <div class="widget-content">
                                     <!-- Blog Category -->
-                                    <ul class="blog-categories">
+                                    <ul class="blog-categories-white">
                                         @forelse ($trending as $key => $item)
                                             <li class="wow fadeInUp" data-wow-delay="200ms"><a href="{{ url('artikel/'.$item->slug) }}">{{ $item->title }}</a></li>
                                         @empty

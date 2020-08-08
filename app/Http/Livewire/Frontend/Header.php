@@ -1,14 +1,11 @@
 <?php
 
-namespace App\Http\Livewire\Admin;
+namespace App\Http\Livewire\Frontend;
 
 use Livewire\Component;
 use App\Page;
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Session;
 
-
-class PageContact extends Component
+class Header extends Component
 {
     public $phone;
     public $phone2;
@@ -24,7 +21,6 @@ class PageContact extends Component
 
     public function mount()
     {
-        Session::put('menu_active', 'contact');
         $data = Page::where('type', 'contact')->first();
         if($data){
             $slice = json_decode($data['description'], true);
@@ -41,33 +37,8 @@ class PageContact extends Component
             $this->address2 = empty($slice['address2'])? '' : $slice['address2'];
         }
     }
-
     public function render()
     {
-        return view('livewire.admin.page-contact');
-    }
-
-    public function store()
-    {
-        $data = Page::where('type', 'contact')->first();
-        $description = [
-            'phone' => $this->phone,
-            'phone2' => $this->phone2,
-            'whatsapp' => $this->whatsapp,
-            'whatsapp2' => $this->whatsapp2,
-            'email' => $this->email,
-            'email2' => $this->email2,
-            'instagram' => $this->instagram,
-            'youtube' => $this->youtube,
-            'facebook' => $this->facebook,
-            'address' => $this->address,
-            'address2' => $this->address2,
-        ];
-        $data->update([
-            'description' => json_encode($description),
-        ]);
-
-        //flash message
-        session()->flash('message', array('type' => 'success', 'content' => 'Data berhasil disimpan'));
+        return view('livewire.frontend.header');
     }
 }

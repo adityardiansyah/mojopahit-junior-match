@@ -18,6 +18,8 @@
                         <div class="kt-heading kt-heading--md">Data Informasi Kami</div>
                         <div>
                         <form action="" method="post" enctype="multipart/form-data" wire:submit.prevent="store">
+                            @csrf
+                            @method('PUT')
                             <div class="modal-body">
                                 @if ($errors->any())
                                     <div class="alert alert-danger alert-bold" role="alert">
@@ -80,6 +82,13 @@
                                             <div class="form-group">
                                                 <label for="facebook">Facebook</label>
                                                 <input wire:model="facebook" type="text" class="form-control" name="facebook" id="" placeholder="Link Facebook (optional)">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="address">Alamat Utama</label>
+                                                <input wire:model="address" type="text" class="form-control" name="address" id="" placeholder="Jalan, Rt, Rw, Desa, Dusun">
+                                                <input wire:model="address2" type="text" class="form-control" name="address2" id="" placeholder="Kecamatan, Kabupaten, Provinsi, Kode Pos">
                                             </div>
                                         </div>
                                     </div>
