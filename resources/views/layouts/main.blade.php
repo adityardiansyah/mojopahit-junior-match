@@ -14,7 +14,8 @@
 <link href="{{asset('public/assets/frontend/css/style.css')}} " rel="stylesheet">
 <link href="{{asset('public/assets/frontend/css/responsive.css')}} " rel="stylesheet">
 <link href="{{asset('public/assets/frontend/css/custom.css')}} " rel="stylesheet">
-<link rel="shortcut icon" href="{{ asset('assets/media/logos/favicon.ico') }}" />
+<link rel="shortcut icon" href="{{ asset('public/images/favicon.ico') }}" />
+
 
 <!-- Scripts -->
 <script src="{{ asset('public/js/app.js') }}" defer></script>

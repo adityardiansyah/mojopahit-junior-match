@@ -25,12 +25,13 @@ class PageAbout extends Component
         $data = Page::where('type', 'about')->first();
         if($data){
             $this->title = $data['title'];
-            $this->imageShow = $data['image'];
+            $this->imageShow = $data->image;
             $slice = json_decode($data['description'], true);
             $description = $slice['description'];
             $maps = $slice['maps'];
             $this->description = empty($description)? '' : $description;
             $this->maps = $maps;
+            $this->video = empty($slice['video'])? '' : $slice['video'];
         }
     }
 
@@ -42,8 +43,7 @@ class PageAbout extends Component
     public function store()
     {
         $cek = Page::where('type', 'about')->first();
-        $image = "";
-        $photo = $this->image;
+        $photo = $cek->image;
         if($this->image){
             $validatedData = $this->validate([
                 'image' => 'image|mimes:jpeg,png,jpg|max:1024'
@@ -65,7 +65,7 @@ class PageAbout extends Component
                 'title' => $this->title,
                 'slug' => Str::slug($this->title, '-'),
                 'description' => json_encode($description),
-                'image' => $image,
+                'image' => $photo,
                 'status' => 1,
             ]);
         }else{
@@ -73,7 +73,7 @@ class PageAbout extends Component
                 'title' => $this->title,
                 'slug' => Str::slug($this->title, '-'),
                 'description' => json_encode($description),
-                'image' => $image,
+                'image' => $photo,
                 'status' => 1,
             ]);
         }

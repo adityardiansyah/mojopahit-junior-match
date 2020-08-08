@@ -25,7 +25,7 @@
                                     {{ $message['content'] }}
                                 </div>
                                 <div class="alert alert-warning">
-                                    <a href="" onclick="window.location.reload(true);" class="text-right">Silakan klik ini untuk melihat Perubahan Deskripsi</a>
+                                    <a href="" onclick="window.location.reload(true);" class="text-right">Silakan klik ini untuk melihat Perubahan</a>
                                 </div>
                             @endif
                         @endif
@@ -35,7 +35,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="title">Nama Halaman</label>
-                                        <input wire:model="title" type="text" class="form-control" name="title" required id="">
+                                        <input wire:model="title" type="text" class="form-control" name="title" required id="" readonly>
                                     </div>
                                 </div>
                                 <div class="col-md-6">

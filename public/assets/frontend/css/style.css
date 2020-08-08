@@ -2395,7 +2395,6 @@ img {
 
 .about-section-two .content-column {
     position: relative;
-    margin-bottom: 50px;
 }
 
 .about-section-two .content-column .sec-title {
@@ -9429,7 +9428,7 @@ a.ui-button:active,
 
 .main-footer .copyright-text {
     position: relative;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 30px;
     color: #999999;
     font-weight: 400;

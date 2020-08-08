@@ -17,7 +17,7 @@
               <div class="auto-container clearfix">
                   <!--Logo-->
                   <div class="logo-outer">
-                    <div class="logo"><a href="/"><img src="{{ asset('images/logo.png')}}" class="img-fluid" style="height:50px;" alt="" title="Mojopahit Junior Match"></a></div>
+                    <div class="logo"><a href="{{ url('/')}}"><img src="{{ asset('images/logo.png')}}" class="img-fluid" style="height:50px;" alt="" title="Mojopahit Junior Match"></a></div>
                   </div>
 
                   <!--Info-->

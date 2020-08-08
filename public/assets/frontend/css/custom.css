@@ -71,8 +71,79 @@
   top: 100px;
   right: -180px;
 }
-.logos{
-  width:70%;
+
+.logos {
+  width: 70%;
+}
+
+.title-about {
+  background: yellow;
+  color: #00132d;
+  font-weight: 700;
+  width: 120px;
+  margin: auto;
+}
+
+.about-sub-title {
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+.card-item-club {
+  background: #00132d;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.cover-item-club {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.img-cover {
+  background-size: cover;
+  width: 100%;
+  display: block;
+  transition: ease .3s;
+
+}
+
+.logo-club {
+  position: absolute;
+  top: 145px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  overflow: hidden;
+  background: #010914;
+}
+
+.img-club {
+  height: 70%;
+  width: 70%;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.cover-item-club:hover .img-cover {
+  transform: scale(1.5);
+}
+
+.hover-yellow{
+  cursor: pointer;
+}
+
+.hover-yellow:hover{
+  color:yellow;
 }
 
 @media only screen and (max-width: 2560px) {

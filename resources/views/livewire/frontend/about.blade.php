@@ -52,16 +52,16 @@
 
                  <!-- Video Column -->
                 <div class="video-column col-lg-6 col-md-12 col-sm-12 p-0 wow fadeInUp" data-wow-delay="400ms">
-                    <img src="{{ asset('images/logo.png')}}" class="img-fluid" alt="">
+                    <img src="{{ asset('storage/'.$image)}}" class="img-fluid" alt="">
                 </div>
             </div>
         </div>
     </section>
     <section class="bg-blue-young">
         <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 m-auto clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 m-auto clearfix text-center">
                     <div>
-                        <iframe style="height:500px; width:70%; display:block;" src="{{ $url_video }}" class="img-fluid m-auto wow fadeInUp" data-wow-delay="400ms" frameborder="0"></iframe>
+                        <iframe src="{{ $url_video }}" class="wow fadeInUp" data-wow-delay="400ms" frameborder="0" width="70%" height="500px"></iframe>
                     </div>
                 </div>
             </div>
@@ -69,11 +69,40 @@
     <section class="about-section-two">
         <div class="auto-container">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 m-auto clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 m-auto clearfix text-center">
                     <div>
-                        <iframe style="height:500px; width:80%; display:block;" src="{{ $url_maps }}" class="img-fluid m-auto wow fadeInUp" data-wow-delay="400ms" frameborder="0"></iframe>
+                        <iframe src="{{ $url_maps }}" class="wow fadeInUp" data-wow-delay="400ms" frameborder="0" width="80%" height="500px"></iframe>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section class="about-section-two" style="border-top:1px solid #00132D;">
+        <div class="container text-center">
+            <h2 class="title-about">
+                TEAM
+            </h2>
+            <h1 class="about-sub-title">PELAKSANA</h1>
+            <div class="row mt-4">
+                @forelse ($team as $item)
+                    <div class="col-lg-4 col-md-4 col-sm-12" style="color:#fff;">
+                        <img src="{{ asset('storage/'.$item->image)}}" alt="{{ $item->name }}" class="img-thumbnail">
+                        <br>
+                        <h5 class="mt-2">
+                            <b>{{ $item->name }}</b>    
+                        </h5>
+                        <p style="color:#fff;">{{ $item->position }}</p>
+                        <p style="color:#fff;">
+                            <b>PT. MAJAPAHIT JUNIOR MATCH</b>
+                        </p>
+                        {{-- <div class="card">
+                            <div class="card-body">
+                            </div>
+                        </div> --}}
+                    </div>
+                @empty
+                    
+                @endforelse
             </div>
         </div>
     </section>
