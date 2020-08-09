@@ -19,9 +19,9 @@
         <div class="auto-container">
             <form action="" method="POST">
             <div class="row mb-4">
-                    <div class="col-lg-2 col-md-2 col-sm-12" wire:ignore>
-                        <select name="filter" id="" class="form-control" wire:model="filter" >
-                                <option value="" selected>Filter Tahun Season</option>
+                    <div class="col-lg-2 col-md-2 col-sm-12">
+                        <select name="filter" id="filter" class="form-control">
+                                <option disabled selected="selected">Filter Tahun Season</option>
                             @foreach ($get_tahun as $item)
                                 <option value="{{ $item->tahun }}">{{ $item->tahun }}</option>                                
                             @endforeach
@@ -46,14 +46,21 @@
                                 <h5 class="p-0 m-0"><b>{{ $item->name }}</b></h5>
                                 <p class="text-white">Jenjang {{ $item->age_level }}</p>
                                 <br>
-                                <a href="" class="hover-yellow">Profil Team <i class="fa fa-arrow-right"></i></a>
+                                <a href="{{ url('detail-club/'.$item->id) }}" class="hover-yellow">Profil Team <i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
                 @empty
-                    <h1 class="text-center">Tidak ada Team</h1>
+                    <h1 class="text-center m-auto">Tidak ada Team</h1>
                 @endforelse
             </div>
         </div>
     </section>
 </div>
+@section('js')
+    <script>
+        $('#filter').on('change', function (e) {
+            @this.set('filter', e.target.value);
+        });
+    </script>
+@endsection
