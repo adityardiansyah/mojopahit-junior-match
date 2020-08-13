@@ -1,6 +1,13 @@
 @section('title')
     Tambah Pemain 
 @endsection
+@push('styles')
+    <style>
+        .datepicker{
+            z-index: 100!important;
+        }
+    </style>
+@endpush
 <div>
     <div class="kt-subheader   kt-grid__item" id="kt_subheader">
         <div class="kt-container  kt-container--fluid ">

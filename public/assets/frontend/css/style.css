@@ -6854,7 +6854,7 @@ a.ui-button:active,
 .projects-section .filters {
     margin-bottom: 45px;
     text-align: center;
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #fff;
 }
 
 .projects-section .filters .filter-tabs {
@@ -6868,7 +6868,7 @@ a.ui-button:active,
     line-height: 30px;
     padding: 10px 55px;
     cursor: pointer;
-    color: #333333;
+    color: #fff;
     font-weight: 500;
     font-size: 16px;
     top: -2px;
@@ -6887,8 +6887,8 @@ a.ui-button:active,
 
 .projects-section .filters .filter.active,
 .projects-section .filters .filter:hover {
-    color: #010914;
-    border-top: 2px solid #010914;
+    color: yellow;
+    border-top: 2px solid yellow;
 }
 
 .mixitup-gallery .project-block {

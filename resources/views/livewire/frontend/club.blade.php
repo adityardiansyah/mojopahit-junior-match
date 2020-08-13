@@ -34,7 +34,7 @@
             </form>
             <div class="row">
                 @forelse ($club as $item)
-                    <div class="col-lg-3 col-md-3 col-sm-12">
+                    <div class="col-lg-3 col-md-3 col-sm-12 mt-4">
                         <div class="card-item-club text-center">
                             <div class="cover-item-club">
                                 <img src="{{ asset('storage/'.$item->cover) }}" class="img-fluid img-cover" alt="">

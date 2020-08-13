@@ -54,6 +54,7 @@ Route::livewire('/video','frontend.video')->layout('layouts.main')->name('video'
 Route::livewire('/galeri','frontend.galeri')->layout('layouts.main')->name('galeri');
 Route::livewire('/club','frontend.club')->layout('layouts.main')->name('club');
 Route::livewire('/detail-club/{id}','frontend.detail-club')->layout('layouts.main')->name('detail-club');
+Route::livewire('/detail-pemain/{id}','frontend.detail-player')->layout('layouts.main')->name('detail-pemain');
 Route::livewire('/cup','frontend.cup')->layout('layouts.main')->name('cup');
 Route::livewire('/league','frontend.league')->layout('layouts.main')->name('league');
 Route::livewire('/hubungi-kami','frontend.contact')->layout('layouts.main')->name('contact');
