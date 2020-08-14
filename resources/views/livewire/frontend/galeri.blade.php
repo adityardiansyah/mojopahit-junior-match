@@ -1,9 +1,20 @@
 @section('title')
     Galeri
 @endsection
+@section('css')
+    <style type="text/css">
+        .fancybox-next span {
+        left: auto;
+        right: 20px;
+        }
+        .fancybox-prev span {
+        left: 20px;
+        }
+    </style>
+@endsection
 <div>
     <!--Page Title-->
-    <section class="page-banner" style="background-image:url(https://majapahitjuniormatch.com/wp-content/uploads/2020/06/5-1-of-1-scaled.jpg);">
+    <section class="page-banner" style="background-image:url({{asset('images/headerpage.jpg')}});">
         <div class="auto-container">
             <div class="inner-container clearfix">
                 <h1>Galeri</h1>
@@ -17,10 +28,10 @@
     <!--End Page Title-->
 
     <!-- Projects Section -->
-    <section class="projects-section">
+    <section class="projects-section" style="background-color: #010914;">
         <div class="auto-container">
-            <div class="sec-title text-center">
-                <h2>Galeri Kami</h2>
+            <div class="sec-title text-center text-white">
+                <h2 class="text-white">Galeri Kami</h2>
                 <h4>Kenangan yang berharga untuk semuanya</h4>
             </div>
             <!--Sortable Masonry-->
@@ -29,102 +40,34 @@
                 <div class="filters">
                     <ul class="filter-tabs filter-btns clearfix">
                         <li class="active filter" data-role="button" data-filter=".all">Semua Galeri</li>
-                        <li class="filter" data-role="button" data-filter=".agriculture">Galeri Cup</li>
-                        <li class="filter" data-role="button" data-filter=".chemical">Galeri League</li>
+                        <li class="filter" data-role="button" data-filter=".cup">Galeri Cup</li>
+                        <li class="filter" data-role="button" data-filter=".league">Galeri League</li>
+                        <li class="filter" data-role="button" data-filter=".lainnya">Lainnya</li>
                     </ul>                     
                 </div>
 
                 <div class="items-container row">
                     <!-- Portfolio Block -->
-                    <div class="project-block all masonry-item chemical oil-and-gas construction col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image"><img src="https://majapahitjuniormatch.com/wp-content/uploads/2020/06/Screenshot_20200604_143737-300x194.png" alt=""></figure>
-                            </div>
-                            <div class="overlay-box">
-                                <div class="inner">
-                                    <h5><a href="#">Selebrasi Gol Bambang Pamungkas</a></h5>
-                                    <div class="link-box"><a href="#" class="view-project">lihat foto <i class="la la-long-arrow-right"></i></a></div>
+                    @forelse ($galeri as $item)
+                        <div class="project-block all masonry-item {{ $item->category }} col-lg-4 col-md-6 col-sm-12">
+                            <div class="inner-box">
+                                <div class="image-box">
+                                    <figure class="image wow fadeIn" rel="galeri"><a href="{{ asset('storage/'.$item->image) }}" class="lightbox-image" rel="galeri"><img src="{{ asset('storage/'.$item->image) }}" alt=""></a></figure>
                                 </div>
+                                {{-- <div class="overlay-box">
+                                    <div class="inner">
+                                        <h5><a href="{{ asset('storage/'.$item->image) }}">{{ $item->title }}</a></h5>
+                                        <div class="link-box"><a href="{{ asset('storage/'.$item->image) }}" class="view-project">lihat foto <i class="la la-long-arrow-right"></i></a></div>
+                                    </div>
+                                </div> --}}
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Portfolio Block -->
-                    <div class="project-block all masonry-item agriculture oil-and-gas mechanical chemical col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image"><img src="https://majapahitjuniormatch.com/wp-content/uploads/2020/06/a558a29a35f91fd3fa3eec71c81a9eac_754x-300x200.jpeg" alt=""></figure>
-                            </div>
-                            <div class="overlay-box">
-                                <div class="inner">
-                                    <h5><a href="#">Selebrasi Gol Bambang Pamungkas</a></h5>
-                                    <div class="link-box"><a href="#" class="view-project">lihat foto <i class="la la-long-arrow-right"></i></a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Portfolio Block -->
-                    <div class="project-block all masonry-item construction oil-and-gas mechanical col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image"><img src="https://majapahitjuniormatch.com/wp-content/uploads/2020/06/5d77c5ba017f2.jpg" alt=""></figure>
-                            </div>
-                            <div class="overlay-box">
-                                <div class="inner">
-                                    <h5><a href="#">Selebrasi Gol Bambang Pamungkas</a></h5>
-                                    <div class="link-box"><a href="#" class="view-project">lihat foto <i class="la la-long-arrow-right"></i></a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Portfolio Block -->
-                    <div class="project-block all masonry-item chemical construction oil-and-gas agriculture col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image"><img src="https://majapahitjuniormatch.com/wp-content/uploads/2020/06/Screenshot_20200604_143737-300x194.png" alt=""></figure>
-                            </div>
-                            <div class="overlay-box">
-                                <div class="inner">
-                                    <h5><a href="#">Selebrasi Gol Bambang Pamungkas</a></h5>
-                                    <div class="link-box"><a href="#" class="view-project">lihat foto <i class="la la-long-arrow-right"></i></a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Portfolio Block -->
-                    <div class="project-block all masonry-item power-energy mechanical chemical col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image"><img src="https://majapahitjuniormatch.com/wp-content/uploads/2020/06/5d77c5ba017f2.jpg" alt=""></figure>
-                            </div>
-                            <div class="overlay-box">
-                                <div class="inner">
-                                    <h5><a href="#">Selebrasi Gol Bambang Pamungkas</a></h5>
-                                    <div class="link-box"><a href="#" class="view-project">lihat foto <i class="la la-long-arrow-right"></i></a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Portfolio Block -->
-                    <div class="project-block all masonry-item agriculture mechanical construction material chemical col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image"><img src="https://majapahitjuniormatch.com/wp-content/uploads/2020/06/Screenshot_20200604_143737-300x194.png" alt=""></figure>
-                            </div>
-                            <div class="overlay-box">
-                                <div class="inner">
-                                    <h5><a href="#">Selebrasi Gol Bambang Pamungkas</a></h5>
-                                    <div class="link-box"><a href="#" class="view-project">lihat foto <i class="la la-long-arrow-right"></i></a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @empty
+                        <h1 class="text-center">Galeri tidak ada</h1>
+                    @endforelse
+                    
                 </div>
+                {{ $galeri->links('livewire.frontend.custom-pagination-links-view') }}
             </div>
         </div>
     </section>

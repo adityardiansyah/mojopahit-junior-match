@@ -5,9 +5,12 @@ namespace App\Http\Livewire\Admin;
 use Livewire\Component;
 use Illuminate\Support\Facades\Session;
 use App\Player;
+use Livewire\WithPagination;
 
 class Players extends Component
 {
+    use WithPagination;
+
     public $countData = 0;
     public $paginate = 10;
     public $search = "";

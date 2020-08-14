@@ -77,7 +77,9 @@
                                     <div class="row">
                                         @forelse ($galeri as $item)
                                             <div class="col-lg-4 col-md-4 col-sm-12">
-                                                <img src="{{ asset('storage/'.$item->image)}}" class="img-fluid video wow fadeInUp" data-wow-delay="100ms" alt="">
+                                                <figure class="image wow fadeIn"><a href="{{ asset('storage/'.$item->image) }}" class="lightbox-image"><img src="{{ asset('storage/'.$item->image) }}" alt=""></a></figure>
+
+                                                {{-- <img src="{{ asset('storage/'.$item->image)}}" class="img-fluid video wow fadeInUp" data-wow-delay="100ms" alt=""> --}}
                                             </div>
                                         @empty
                                             <div class="col-md-12 text-center">

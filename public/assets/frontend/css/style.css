@@ -6670,6 +6670,35 @@ a.ui-button:active,
     background-color: #00132d;
 }
 
+.styled-pagination li button {
+    position: relative;
+    display: inline-block;
+    line-height: 38px;
+    font-size: 15px;
+    height: 40px;
+    width: 40px;
+    color: #666666;
+    font-weight: 500;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #e6e6e6;
+    text-transform: capitalize;
+    border-radius: 50%;
+    font-family: "Roboto", sans-serif;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.styled-pagination li button:hover,
+.styled-pagination li button.active {
+    color: #ffffff;
+    border-color: #010914;
+    background-color: #00132d;
+}
+
 /*** 
 
 ====================================================================
@@ -7334,7 +7363,7 @@ a.ui-button:active,
 }
 
 .project-block-three .caption-box h4 a:hover {
-    color: #ed7902;
+    color: #000000;
 }
 
 .project-block-three .caption-box .category {

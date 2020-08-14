@@ -14,10 +14,6 @@ Route::get('storage/{folder}/{filename}', function ($folder,$filename){
     return $response;
 });
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function(){

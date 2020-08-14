@@ -436,8 +436,9 @@
 		$('.lightbox-image').fancybox({
 			openEffect  : 'fade',
 			closeEffect : 'fade',
+			showNavArrows: true,
 			helpers : {
-				media : {}
+				media: {}
 			}
 		});
 	}

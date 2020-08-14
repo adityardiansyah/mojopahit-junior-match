@@ -5,9 +5,12 @@ namespace App\Http\Livewire\Admin;
 use Livewire\Component;
 use Illuminate\Support\Facades\Session;
 use App\Post;
+use Livewire\WithPagination;
 
 class Article extends Component
 {
+    use WithPagination;
+
     public $paginate = 10;
     public $search;
     public $countData;
