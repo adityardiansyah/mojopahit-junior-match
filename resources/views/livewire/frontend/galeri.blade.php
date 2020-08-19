@@ -51,8 +51,8 @@
                     @forelse ($galeri as $item)
                         <div class="project-block all masonry-item {{ $item->category }} col-lg-4 col-md-6 col-sm-12">
                             <div class="inner-box">
-                                <div class="image-box">
-                                    <figure class="image wow fadeIn" rel="galeri"><a href="{{ asset('storage/'.$item->image) }}" class="lightbox-image" rel="galeri"><img src="{{ asset('storage/'.$item->image) }}" alt=""></a></figure>
+                                <div class="image-box owl-carousel owl-theme">
+                                    <figure class="image wow fadeIn" rel="galeri"><a href="{{ asset('storage/'.$item->image) }}" class="lightbox-image" data-fancybox="team"><img src="{{ asset('storage/'.$item->image) }}" alt=""></a></figure>
                                 </div>
                                 {{-- <div class="overlay-box">
                                     <div class="inner">

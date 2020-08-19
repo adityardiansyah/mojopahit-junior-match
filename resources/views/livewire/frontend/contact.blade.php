@@ -1,9 +1,16 @@
 @section('title')
     Hubungi Kami
 @endsection
+@section('css')
+    <style>
+        .contact-info-block{
+            margin-bottom: 0px;
+        }
+    </style>
+@endsection
 <div>
     <!--Page Title-->
-    <section class="page-banner" style="background-image:url(https://majapahitjuniormatch.com/wp-content/uploads/2020/06/5-1-of-1-scaled.jpg);">
+    <section class="page-banner" style="background-image:url({{asset('images/headerpage.jpg')}});">
         <div class="auto-container">
             <div class="inner-container clearfix">
                 <h1>Hubungi Kami</h1>
@@ -16,4 +23,65 @@
     </section>
     <!--End Page Title-->
 
+    <!-- Projects Section -->
+    <section class="projects-section" style="background-color: #010914;">
+        <div class="auto-container">
+            <div class="row">
+                <!-- Contact Info BLock -->
+                <div class="contact-info-block col-lg-4 col-md-12" >
+                    <div style="background-color: #00132D; padding:32px;">
+                        <a href="tel:{{ $phone }}">
+                            <span class="icon la la-phone"></span>
+                            <h4>Hubungi kami</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Info BLock -->
+                <div class="contact-info-block col-lg-4 col-md-12">
+                    <div style="background-color: #00132D; padding:32px;">
+                        <a href="mailto:{{ $email }}">
+                            <span class="icon la la-envelope"></span>
+                            <h4>Email</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Info BLock -->
+                <div class="contact-info-block col-lg-4 col-md-12">
+                    <div style="background-color: #00132D; padding:32px;">
+                        <a href="tel:{{ $whatsapp }}">
+                            <span class="icon la la-whatsapp"></span>
+                            <h4>Whatsapp</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-info-block col-lg-4 mt-4 col-md-12">
+                    <div style="background-color: #00132D; padding:32px;">
+                        <a href="tel:{{ $instagram }}">
+                            <span class="icon la la-instagram"></span>
+                            <h4>Instagram</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-info-block col-lg-4 mt-4 col-md-12">
+                    <div style="background-color: #00132D; padding:32px;">
+                        <a href="tel:{{ $facebook }}">
+                            <span class="icon la la-facebook"></span>
+                            <h4>Facebook</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-info-block col-lg-4 mt-4 col-md-12">
+                    <div style="background-color: #00132D; padding:32px;">
+                        <a href="tel:{{ $youtube }}">
+                            <span class="icon la la-youtube"></span>
+                            <h4>Youtube</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Projects Section -->
 </div>
