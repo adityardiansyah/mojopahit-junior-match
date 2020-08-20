@@ -118,9 +118,9 @@
                                 </div>
                                 <div class="widget-content">
                                     <!-- Blog Category -->
-                                    <img src="{{ asset('images/poster.png')}}" class="img-fluid wow fadeInUp" data-wow-delay="300ms" alt="">
+                                    <img src="{{ asset('storage/'.$v_poster)}}" class="img-fluid wow fadeInUp" data-wow-delay="300ms" alt="">
                                     <br><br>
-                                    <iframe src="https://www.youtube.com/embed/juoCHaHmxJA?feature=oembed&start&end&wmode=opaque&loop=0&controls=1&mute=0&rel=0&modestbranding=0" class="img-fluid video wow fadeInUp" data-wow-delay="400ms" frameborder="0"></iframe>
+                                    <iframe src="{{ $landing_video }}" class="img-fluid video wow fadeInUp" data-wow-delay="400ms" frameborder="0"></iframe>
                                 </div>
                             </div>
                         </aside>

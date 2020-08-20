@@ -84,11 +84,23 @@
                                                 <input wire:model="facebook" type="text" class="form-control" name="facebook" id="" placeholder="Link Facebook (optional)">
                                             </div>
                                         </div>
-                                        <div class="col-md-12">
+                                        <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="address">Alamat Utama</label>
                                                 <input wire:model="address" type="text" class="form-control" name="address" id="" placeholder="Jalan, Rt, Rw, Desa, Dusun">
                                                 <input wire:model="address2" type="text" class="form-control" name="address2" id="" placeholder="Kecamatan, Kabupaten, Provinsi, Kode Pos">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="landing_video">Embed Video Youtube Landing Page</label>
+                                                <input wire:model="landing_video" type="text" class="form-control" name="landing_video" id="" placeholder="Link Embed Youtube (optional)">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="poster">Poster</label> <a href="{{ asset('storage/'.$v_poster) }}" target="_blank">Lihat Poster</a>
+                                                <input wire:model="poster" type="file" class="form-control" name="poster" id="">
                                             </div>
                                         </div>
                                     </div>

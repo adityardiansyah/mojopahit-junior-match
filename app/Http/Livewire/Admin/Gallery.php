@@ -22,8 +22,12 @@ class Gallery extends Component
 
     public function render()
     {
+        $data = Galeri::latest()->get();
+        foreach ($data as $key => $value) {
+            $data[$key]->images = json_decode($value->image, TRUE);
+        }
         return view('livewire.admin.gallery', [
-            'data' => Galeri::latest()->get()
+            'data' => $data
         ]);
     }
 
@@ -37,10 +41,12 @@ class Gallery extends Component
         if($id){
             try{
                 $data = Galeri::find($id);
-                $url = storage_path('app/public/'.$data->image);
-            
-                if(is_file($url)){
-                    unlink($url);
+                foreach (json_decode($data->image, TRUE) as $key => $value) {
+                    $url = storage_path('app/public/'.$value);
+                
+                    if(is_file($url)){
+                        unlink($url);
+                    }
                 }
                 $data->delete();
                 session()->flash('message', array('type' => 'success', 'content' => 'Data berhasil dihapus'));

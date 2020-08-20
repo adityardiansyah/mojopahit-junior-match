@@ -24,7 +24,9 @@
                         </div>
                         <div class="form-group">
                             <label for="image">Gambar</label>
-                            <img src="{{ asset('storage/'.$image_gallery)}}" class="img-fluid" alt="">
+                            @foreach (json_decode($image_gallery, TRUE) as $item)
+                                <img src="{{ asset('storage/'.$item)}}" class="img-fluid" alt="">
+                            @endforeach
                             <input type="file" wire:model="image" name="image" id="image" class="form-control">
                         </div>
                         <div class="form-group">

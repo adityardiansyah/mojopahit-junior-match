@@ -28,7 +28,7 @@
         <div class="auto-container">
             <div class="row">
                 <!-- Contact Info BLock -->
-                <div class="contact-info-block col-lg-4 col-md-12" >
+                <div class="contact-info-block col-lg-4 mt-4 col-md-12" >
                     <div style="background-color: #00132D; padding:32px;">
                         <a href="tel:{{ $phone }}">
                             <span class="icon la la-phone"></span>
@@ -38,7 +38,7 @@
                 </div>
 
                 <!-- Contact Info BLock -->
-                <div class="contact-info-block col-lg-4 col-md-12">
+                <div class="contact-info-block col-lg-4 mt-4 col-md-12">
                     <div style="background-color: #00132D; padding:32px;">
                         <a href="mailto:{{ $email }}">
                             <span class="icon la la-envelope"></span>
@@ -48,9 +48,9 @@
                 </div>
 
                 <!-- Contact Info BLock -->
-                <div class="contact-info-block col-lg-4 col-md-12">
+                <div class="contact-info-block col-lg-4 mt-4 col-md-12">
                     <div style="background-color: #00132D; padding:32px;">
-                        <a href="tel:{{ $whatsapp }}">
+                        <a href="https://api.whatsapp.com/send?phone={{ $whatsapp }}">
                             <span class="icon la la-whatsapp"></span>
                             <h4>Whatsapp</h4>
                         </a>
@@ -58,7 +58,7 @@
                 </div>
                 <div class="contact-info-block col-lg-4 mt-4 col-md-12">
                     <div style="background-color: #00132D; padding:32px;">
-                        <a href="tel:{{ $instagram }}">
+                        <a href="{{ $instagram }}">
                             <span class="icon la la-instagram"></span>
                             <h4>Instagram</h4>
                         </a>
@@ -66,7 +66,7 @@
                 </div>
                 <div class="contact-info-block col-lg-4 mt-4 col-md-12">
                     <div style="background-color: #00132D; padding:32px;">
-                        <a href="tel:{{ $facebook }}">
+                        <a href="{{ $facebook }}">
                             <span class="icon la la-facebook"></span>
                             <h4>Facebook</h4>
                         </a>
@@ -74,7 +74,7 @@
                 </div>
                 <div class="contact-info-block col-lg-4 mt-4 col-md-12">
                     <div style="background-color: #00132D; padding:32px;">
-                        <a href="tel:{{ $youtube }}">
+                        <a href="{{ $youtube }}">
                             <span class="icon la la-youtube"></span>
                             <h4>Youtube</h4>
                         </a>

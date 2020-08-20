@@ -6,10 +6,13 @@ use Livewire\Component;
 use App\Page;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Session;
+use Livewire\WithFileUploads;
 
 
 class PageContact extends Component
 {
+    use WithFileUploads;
+
     public $phone;
     public $phone2;
     public $whatsapp;
@@ -21,6 +24,9 @@ class PageContact extends Component
     public $instagram;
     public $address;
     public $address2;
+    public $poster;
+    public $v_poster;
+    public $landing_video;
 
     public function mount()
     {
@@ -39,6 +45,8 @@ class PageContact extends Component
             $this->facebook = empty($slice['facebook'])? '' : $slice['facebook'];
             $this->address = empty($slice['address'])? '' : $slice['address'];
             $this->address2 = empty($slice['address2'])? '' : $slice['address2'];
+            $this->landing_video = empty($slice['landing_video'])? '' : $slice['landing_video'];
+            $this->v_poster = empty($slice['poster'])? '' : $slice['poster'];
         }
     }
 
@@ -49,6 +57,19 @@ class PageContact extends Component
 
     public function store()
     {
+        $image = "";
+        if($this->poster){
+            $this->validate([
+                'poster' => 'image|mimes:jpeg,png,jpg|max:2048',
+            ],
+            [
+                'poster.image' => 'Harus bentuk Gambar',
+                'poster.mimes' => 'Gambar harus bentuk jpeg, png, jpg',
+                'poster.max' => 'Maksimal Gambar berukuran 5MB' 
+            ]);
+            $image = $this->poster->store("poster",'public');
+        }
+
         $data = Page::where('type', 'contact')->first();
         $description = [
             'phone' => $this->phone,
@@ -62,6 +83,8 @@ class PageContact extends Component
             'facebook' => $this->facebook,
             'address' => $this->address,
             'address2' => $this->address2,
+            'landing_video' => $this->landing_video,
+            'poster' => $image,
         ];
         $data->update([
             'description' => json_encode($description),

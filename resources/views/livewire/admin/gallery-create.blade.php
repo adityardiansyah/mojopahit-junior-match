@@ -23,7 +23,7 @@
                         </div>
                         <div class="form-group">
                             <label for="image">Gambar</label>
-                            <input type="file" wire:model="image" name="image" id="image" class="form-control">
+                            <input type="file" wire:model="image" name="image" id="image" class="form-control" multiple>
                         </div>
                         <div class="form-group">
                             <label for="image">Kategori</label>

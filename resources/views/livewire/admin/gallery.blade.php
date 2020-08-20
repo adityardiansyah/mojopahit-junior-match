@@ -70,7 +70,9 @@
                                             <b>{{ $item->title }}</b>
                                         </td>
                                         <td width="300px">
-                                            <img src="{{ asset('storage/'.$item->image)}}" class="img-fluid" alt="">
+                                            @foreach ($item->images as $value)
+                                                <a href="{{ asset('storage/'.$value)}}" target="_blank"><img src="{{ asset('storage/'.$value)}}" style="width:40%; float:left; margin:2px;" alt=""></a>
+                                            @endforeach
                                         </td>
                                         <td>
                                             <button wire:click="delete({{$item->id}})" onclick="deleteData({{$item->id}}) || event.stopImmediatePropagation()" data-toggle="tooltip" data-placement="top" title="Hapus" id="button" type="button" class="btn btn-hover-danger btn-elevate-hover btn-icon btn-sm btn-icon-md btn-circle">
