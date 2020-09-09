@@ -35,7 +35,7 @@ class DetailArticle extends Component
                 $pos = Post::where('category_id', $item->id)->get()->count();
                 $this->category_all[$key]->total = $pos;
             }
-            $this->post_category = Post::where('slug','!=',$slug)->where('category_id', $cek->category_id)->limit(5)->get();
+            $this->post_category = Post::where('slug','!=',$slug)->where('status','PUBLISH')->where('category_id', $cek->category_id)->limit(5)->get();
         }catch(\Exception $e){
             return $e->getMessage();
         }

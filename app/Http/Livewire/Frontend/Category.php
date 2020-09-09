@@ -26,7 +26,7 @@ class Category extends Component
 
     public function render()
     {
-        $data = Post::where('category_id', $this->cat->id)->latest()->paginate($this->paginate);
+        $data = Post::where('category_id', $this->cat->id)->where('status','PUBLISH')->latest()->paginate($this->paginate);
         return view('livewire.frontend.category', [
             'blog' => $data 
         ]);
