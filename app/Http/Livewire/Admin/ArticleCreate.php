@@ -24,6 +24,7 @@ class ArticleCreate extends Component
     public $meta_keyword;
     public $published_at;
     public $status;
+    public $save;
 
     public function mount()
     {

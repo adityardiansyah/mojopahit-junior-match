@@ -110,6 +110,9 @@
                         <div class="modal-footer">
                             <a href="{{ route('admin.article') }}" class="btn btn-secondary"><i class="la la-arrow-left"></i> Kembali</a>  
                             <button type="submit" class="btn btn-primary"><i class="la la-save"></i> Simpan</button>
+                            <div wire:loading">
+                                Proses Simpan...
+                            </div>
                         </div>
                     </div>
                 </div>

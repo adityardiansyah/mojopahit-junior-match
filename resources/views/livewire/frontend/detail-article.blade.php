@@ -45,14 +45,14 @@
 
                                 <!-- Other Options -->
                                 <div class="post-share-options clearfix">
-                                    <div class="pull-left">
+                                    {{-- <div class="pull-left">
                                         <p>Tags : </p>
                                         <ul class="tags">
                                             <li><a href="#">Solutions</a>,</li>
                                             <li><a href="#">Technology</a>,</li>
                                             <li><a href="#">Maketing</a>,</li>
                                         </ul>                               
-                                    </div>
+                                    </div> --}}
 
                                     {{-- <div class="social-links pull-right">
                                         <p><strong>0</strong> Shares</p>
@@ -165,12 +165,14 @@
                         
                         <!-- Category Widget -->
                         <div class="sidebar-widget categories">
-                            <h4 class="sidebar-title">Categories</h4>
+                            <div class="sec-title wow fadeInUp" data-wow-delay="200ms" style="margin-bottom:32px;">
+                                <span class="title" style="margin:0;">Categories</span>
+                            </div>
                             <div class="widget-content">
                                 <!-- Blog Category -->
                                 <ul class="blog-categories">
                                     @foreach ($category_all as $item)
-                                        <li><a href="#">{{ $item->name }} <span>({{ $item->total }})</span></a></li>
+                                        <li><a href="{{ url('category/'.$item->slug) }}">{{ $item->name }} <span>({{ $item->total }})</span></a></li>
                                     @endforeach
                                 </ul>
                             </div>
@@ -178,13 +180,15 @@
                         
                         <!-- Post Widget -->
                         <div class="sidebar-widget popular-posts">
-                            <h4 class="sidebar-title">Recent News</h4>
+                            <div class="sec-title wow fadeInUp" data-wow-delay="200ms" style="margin-bottom:32px;">
+                                <span class="title" style="margin:0;">Recent News</span>
+                            </div>
                             <div class="widget-content">
                                 @foreach ($post_category as $item)
                                     <article class="post">
                                         <div class="post-inner">
-                                            <figure class="post-thumb"><a href="blog-detail.html"><img src="{{ asset('storage/'.$item->image) }}" alt=""></a></figure>
-                                            <div class="text"><a href="blog-detail.html">{{ $item->title }}</a></div>
+                                            <figure class="post-thumb"><a href="{{ url('artikel/'.$item->slug) }}"><img src="{{ asset('storage/'.$item->image) }}" alt=""></a></figure>
+                                            <div class="text"><a href="{{ url('artikel/'.$item->slug) }}">{{ $item->title }}</a></div>
                                             <div class="post-info">{{ GlobalHelper::tgl_indo($item->published_at)}}</div>
                                         </div>
                                     </article>
