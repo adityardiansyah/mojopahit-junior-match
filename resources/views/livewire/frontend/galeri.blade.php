@@ -48,23 +48,51 @@
 
                 <div class="items-container row">
                     <!-- Portfolio Block -->
-                    @forelse ($galeri as $item)
+                    {{-- @forelse ($galeri as $item)
                         <div class="project-block all masonry-item {{ $item->category }} col-lg-4 col-md-6 col-sm-12">
                             <div class="inner-box">
                                 <div class="image-box owl-carousel owl-theme">
                                     <figure class="image wow fadeIn" rel="galeri"><a href="{{ asset('storage/'.$item->image) }}" class="lightbox-image" data-fancybox="team"><img src="{{ asset('storage/'.$item->image) }}" alt=""></a></figure>
                                 </div>
-                                {{-- <div class="overlay-box">
-                                    <div class="inner">
-                                        <h5><a href="{{ asset('storage/'.$item->image) }}">{{ $item->title }}</a></h5>
-                                        <div class="link-box"><a href="{{ asset('storage/'.$item->image) }}" class="view-project">lihat foto <i class="la la-long-arrow-right"></i></a></div>
-                                    </div>
-                                </div> --}}
                             </div>
                         </div>
                     @empty
                         <h1 class="text-center">Galeri tidak ada</h1>
-                    @endforelse
+                    @endforelse --}}
+                    @forelse ($galeri as $item)
+                        @if(!empty(json_decode($item->image, TRUE)[0]))
+                        <div class="project-block-three all masonry-item {{ $item->category }} col-lg-4 col-md-6 col-sm-12">
+                            <div class="inner-box">
+                                <div class="image-box">
+                                    <figure class="image wow fadeIn">
+                                        <a href="{{ asset('storage/'.json_decode($item->image, TRUE)[0]) }}"
+                                            class="lightbox-image" data-fancybox="{{json_decode($item->image, TRUE)[0]}}">
+                                            <img src="{{ asset('storage/'.json_decode($item->image, TRUE)[0]) }}"
+                                                data-wow-delay="100ms" class="img-fluid video wow fadeInUp">
+                                        </a>
+                                    </figure>
+                                </div>
+                                <div class="caption-box text-center">
+                                    <h5 class=""><a href="javascript:;" style="cursor:default;">{{ $item->title }}</a></h5>
+                                    @foreach (json_decode($item->image, TRUE) as $value)
+                                    @if ($value != json_decode($item->image, TRUE)[0])
+                                        <figure class="image wow fadeIn">
+                                            <a href="{{ asset('storage/'.$value) }}" class="lightbox-image"
+                                                data-fancybox="{{json_decode($item->image, TRUE)[0]}}">
+                                            </a>
+                                        </figure>
+                                    @endif
+                                    @endforeach
+                                    <span class="category">{{ GlobalHelper::tgl_indo_not_munite($item->created_at) }}</span>
+                                </div>
+                            </div>
+                        </div>
+                        @endif
+                        @empty
+                        <div class="col-md-12 text-center">
+                            <h1>Galeri tidak ada</h1>
+                        </div>
+                        @endforelse
                     
                 </div>
                 {{ $galeri->links('livewire.frontend.custom-pagination-links-view') }}

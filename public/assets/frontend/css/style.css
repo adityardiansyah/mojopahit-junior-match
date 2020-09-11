@@ -5526,6 +5526,8 @@ a.ui-button:active,
 
 .news-block .inner-box {
     position: relative;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .news-block .image-box {
@@ -5563,7 +5565,7 @@ a.ui-button:active,
     position: relative;
     display: block;
     padding: 4px 12px 0;
-    border: 1px solid #f2f2f2;
+    background: #00132D;
     border-top: 0;
 }
 
@@ -7279,7 +7281,7 @@ a.ui-button:active,
 
 .project-block-three .inner-box {
     position: relative;
-    background-color: #ffffff;
+    background: #00132d;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.10);
 }
 
@@ -7340,6 +7342,7 @@ a.ui-button:active,
 .project-block-three .caption-box {
     position: relative;
     padding: 25px 30px;
+    background: #00132d;
 }
 
 .project-block-three .caption-box h4 {
@@ -7347,13 +7350,13 @@ a.ui-button:active,
     display: block;
     font-size: 20px;
     line-height: 1.2em;
-    color: #333333;
+    color: #ebebeb;
     font-weight: 700;
     margin-bottom: 5px;
 }
 
 .project-block-three .caption-box h4 a {
-    color: #333333;
+    color: #d8d8d8;
     display: inline-block;
     -webkit-transition: all 300ms ease;
     -moz-transition: all 300ms ease;
@@ -7363,7 +7366,7 @@ a.ui-button:active,
 }
 
 .project-block-three .caption-box h4 a:hover {
-    color: #000000;
+    color: #ffffff;
 }
 
 .project-block-three .caption-box .category {

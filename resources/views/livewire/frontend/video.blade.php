@@ -25,7 +25,7 @@
                     <div class="project-block-three col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
                         <div class="inner-box">
                             <div class="image-box">
-                                <iframe src="{{ $item->embed }}" class="img-fluid wow fadeInUp animated" style="width: 100%; height: 200px;" data-wow-delay="100ms" frameborder="0"></iframe>
+                                <iframe src="{{ $item->embed }}" class="img-fluid wow fadeInUp animated" style="width: 100%; height: 200px;" data-wow-delay="100ms" frameborder="0" allowfullscreen></iframe>
                             </div>
                             <div class="caption-box text-center">
                                 @if ($item->team->name == 'Tidak Ada Team')

@@ -12,7 +12,8 @@ class Gallery extends Component
     protected $listeners = [
         'storeGalery' => 'handleStoreGalery',
         'delete' => 'handleDeleteGalery',
-        'editGallery' => 'handleEditGalery'
+        'editGallery' => 'handleEditGalery',
+        'deleteImageGallery' => 'handleDeleteImageGallery'
     ];
 
     public function mount()
@@ -67,6 +68,12 @@ class Gallery extends Component
 
     public function handleEditGalery()
     {
+        $this->statusUpdate = false;
         session()->flash('message', array('type' => 'success', 'content' => 'Data berhasil diedit'));
+    }
+
+    public function handleDeleteImageGallery()
+    {
+        session()->flash('message', array('type' => 'success', 'content' => 'Gambar berhasil dihapus'));
     }
 }

@@ -4,15 +4,15 @@
         <input type="hidden" wire:model="gallery_id" value="{{ $gallery_id }}">
         <div class="modal-body">
             @if ($errors->any())
-                <div class="alert alert-danger alert-bold" role="alert">
-                    <div class="alert-text">
-                        <ul class="mb-0">
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
+            <div class="alert alert-danger alert-bold" role="alert">
+                <div class="alert-text">
+                    <ul class="mb-0">
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
                 </div>
+            </div>
             @endif
             <table class="mt-3">
                 @csrf
@@ -23,11 +23,23 @@
                             <input type="text" class="form-control" id="title" wire:model="title" autocomplete="off">
                         </div>
                         <div class="form-group">
-                            <label for="image">Gambar</label>
-                            @foreach (json_decode($image_gallery, TRUE) as $item)
-                                <img src="{{ asset('storage/'.$item)}}" class="img-fluid" alt="">
-                            @endforeach
-                            <input type="file" wire:model="image" name="image" id="image" class="form-control">
+                            <label for="image">Gambar</label><br>
+                            <div class="row mb-2 text-center">
+                                @if($image_gallery != null || !empty($image_gallery))
+                                @forelse ($image_gallery as $item)
+                                <div class="col-4 text-center">
+                                    <div class="m-auto">
+                                        <img src="{{ asset('storage/'.$item)}}" class="img-fluid mb-2 clearfix" alt="">
+                                        <br>
+                                        <button class="btn btn-outline-danger m-auto" wire:click="deleteGallery('{{$item}}', {{ $gallery_id }})"><i class="icon flaticon-close"></i>Hapus</button>
+                                    </div>
+                                </div>
+                                @empty
+                                @endforelse
+
+                                @endif
+                            </div>
+                            <input type="file" wire:model="image" name="image" id="image" class="form-control" multiple>
                         </div>
                         <div class="form-group">
                             <label for="image">Kategori</label>

@@ -24,8 +24,6 @@ class VideoCreate extends Component
     {
         $validatedData = $this->validate([
             'title' => 'required',
-            'team_id' => 'required',
-            'team2_id' => 'required',
             'embed' => 'required',
         ]);
 

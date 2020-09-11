@@ -33,16 +33,20 @@
                     <div class="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
                         <div class="inner-box">
                             <div class="image-box">
-                                <figure class="image"><a href="#"><img src="{{ asset('storage/'.$item->image) }}" alt=""></a></figure>
+                                <figure class="image"><a href="{{ url('artikel/'.$item->slug) }}"><img src="{{ asset('storage/'.$item->image) }}" alt=""></a></figure>
                             </div>
                             <div class="lower-content">
                                 <ul class="post-info">
-                                    <li><span class="material-icons">event</span> {{ GlobalHelper::tgl_indo($item->published_at) }}</li>
-                                    {{-- <li><span class="material-icons">textsms</span> Comment: 2</li> --}}
+                                    <li><span class="material-icons">event</span>
+                                        {{ GlobalHelper::tgl_indo($item->published_at) }}</li>
                                 </ul>
-                                <h5><a href="{{ url('artikel/'.$item->slug) }}">{{ $item->title }}</a></h5>
-                                <div class="text text-justify" style="color:#c1c1c1!important;">{!! GlobalHelper::limit_word($item->description) !!}</div>
-                                <div class="link-box"><a href="{{ url('artikel/'.$item->slug) }}">Read more <i class="la la-long-arrow-right"></i></a></div>
+                                <h5><a
+                                        href="{{ url('artikel/'.$item->slug) }}">{{ $item->title }}</a>
+                                </h5>
+
+                                <div class="link-box"><a
+                                        href="{{ url('artikel/'.$item->slug) }}">Read more <i
+                                            class="la la-long-arrow-right"></i></a></div>
                             </div>
                         </div>
                     </div>
