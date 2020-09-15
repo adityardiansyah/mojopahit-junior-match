@@ -34,7 +34,11 @@ class Gallery extends Component
 
     public function handleStoreGalery($data)
     {
+      if($data == 'success'){
         session()->flash('message', array('type' => 'success', 'content' => 'Data berhasil disimpan'));
+      }else{
+        session()->flash('message', array('type' => 'danger', 'content' => 'Data gagal disimpan, coba refresh atau klik tombol bersihkan!'));
+      }
     }
 
     public function handleDeleteGalery($id)
@@ -44,7 +48,7 @@ class Gallery extends Component
                 $data = Galeri::find($id);
                 foreach (json_decode($data->image, TRUE) as $key => $value) {
                     $url = storage_path('app/public/'.$value);
-                
+
                     if(is_file($url)){
                         unlink($url);
                     }

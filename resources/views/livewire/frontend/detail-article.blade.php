@@ -3,7 +3,7 @@
 @endsection
 <div>
     <!--Page Title-->
-    <section class="page-banner" style="background-image:url({{asset('images/headerpage.jpg')}});">
+    <section class="page-banner" style="background-image:url({{ asset('storage/'.$image) }});">
         <div class="auto-container">
             <div class="inner-container clearfix">
                 <h1>{{ $title }}</h1>
@@ -28,10 +28,10 @@
                         <!-- News Block -->
                         <div class="news-block">
                             <div class="inner-box">
-                                <div class="image-box wow fadeIn">
+                                {{-- <div class="image-box wow fadeIn">
                                     <figure class="image"><img src="{{ asset('storage/'.$image) }}" alt=""></figure>
-                                </div>
-                                <div class="lower-content">
+                                </div> --}}
+                                <div class="lower-content" style="background: #fff!important;">
                                     <ul class="post-info-top">
                                         <li><span class="material-icons">event</span> {{ GlobalHelper::tgl_indo($published_at) }}</li>
                                         <li><span class="material-icons">person</span> {{ $user_id }}</li>
@@ -89,7 +89,7 @@
                         </div>
 
                         <!--Comment Form-->
-                        <div class="comment-form">
+                        {{-- <div class="comment-form">
                             <div class="group-title"><h4>Leave a Reply</h4></div>
 
                             <form method="post" action="">
@@ -117,9 +117,9 @@
                                 </div>
                             </form>
                         </div>
-                        <br><br>
+                        <br><br> --}}
                         <!-- Comments Area -->
-                        <div class="comments-area">
+                        {{-- <div class="comments-area">
                             <div class="group-title"><h4>2 Response</h4></div>
                             <div class="comment-box">
                                 <div class="comment">
@@ -144,7 +144,7 @@
                                     <a href="#" class="reply-btn"><span class="fa fa-angle-right"></span> Reply</a>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
 
                         
                     </div>

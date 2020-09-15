@@ -11,7 +11,7 @@ class GalleryCreate extends Component
     use WithFileUploads;
 
     public $title;
-    public $image = [];
+    public $image;
     public $category;
 
     public function render()
@@ -24,23 +24,26 @@ class GalleryCreate extends Component
         $this->validate([
             'title' => 'required',
             'category' => 'required',
-            'image.*' => 'image|mimes:jpeg,png,jpg|max:2048',
+            'image.*' => 'image|mimes:jpeg,png,jpg',
         ]);
         $gambar = [];
-        foreach ($this->image as $key => $value) {
+        if($this->image != null){
+          foreach ($this->image as $key => $value) {
             $this->image[$key] = $value->store("galery",'public');
             array_push($gambar, $this->image[$key]);
-        }
+          }
 
-        $data = Gallery::create([
+          $data = Gallery::create([
             'title' => $this->title,
             'image' => json_encode($gambar),
             'category' => $this->category
-        ]);
+          ]);
+          $this->resetInput();
+          $this->emit('storeGalery', 'success');
+        }else{
+          $this->emit('storeGalery', 'error');
+        }
 
-        $this->resetInput();
-        // session()->flash('message', array('type' => 'success', 'content' => 'Data berhasil disimpan'));
-        $this->emit('storeGalery', $data);
     }
     public function resetInput()
     {

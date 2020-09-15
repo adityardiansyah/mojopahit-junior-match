@@ -60,7 +60,7 @@ class ArticleEdit extends Component
             $image = $this->image;
             if($this->imageEdited){
                 $validatedData = $this->validate([
-                    'imageEdited' => 'image|mimes:jpeg,png,jpg|max:1024'
+                    'imageEdited' => 'image|mimes:jpeg,png,jpg'
                 ]);
                 $image = $this->imageEdited->store("post",'public');
                 $url = storage_path('app/public/'.$cek->image);

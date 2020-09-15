@@ -25,7 +25,7 @@ class ArticleCreate extends Component
     public $published_at;
     public $status;
     public $save;
-
+    
     public function mount()
     {
         $this->user_id = Auth::user()->id;
@@ -43,7 +43,7 @@ class ArticleCreate extends Component
         $image = "";
         if($this->image){
             $validatedData = $this->validate([
-                'image' => 'image|mimes:jpeg,png,jpg|max:2048'
+                'image' => 'image|mimes:jpeg,png,jpg'
             ]);
             $image = $this->image->store("post",'public');
         }
