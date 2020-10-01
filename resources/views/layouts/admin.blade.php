@@ -32,7 +32,7 @@
     <link href="{{ asset('public/assets/css/skins/aside/dark.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('public/assets/plugins/general/summernote/dist/summernote.css') }}" charset="utf-8" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" href="{{ asset('public/images/favicon.ico') }}" />
-    
+
     <!-- Scripts -->
     <script src="{{ asset('public/js/app.js') }}" defer></script>
     <style>
@@ -74,7 +74,7 @@
     </style>
 
     @stack('styles')
-    
+
     <livewire:styles>
 
 </head>
@@ -186,12 +186,12 @@
                                         </li>
                                         <li class="kt-menu__item @if($menu_active == 'category') kt-menu__item--here @endif" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
                                             <a href="{{ url('/admin/category') }}" class="kt-menu__link"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Kategori</span></a>
-                                        </li>    
+                                        </li>
                                     </ul>
                                 </div>
                             </li>
-                            
-                            <li class="kt-menu__item kt-menu__item--submenu @if(in_array($menu_active, ['information','about', 'contact'])) kt-menu__item--open kt-menu__item--here @endif"" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+
+                            <li class="kt-menu__item kt-menu__item--submenu @if(in_array($menu_active, ['information','about', 'contact'])) kt-menu__item--open kt-menu__item--here @endif" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
                                 <a class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-users"></i><span class="kt-menu__link-text">Informasi Perusahaan</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                 <div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
                                     <ul class="kt-menu__subnav">
@@ -204,8 +204,8 @@
                                     </ul>
                                 </div>
                             </li>
-                            
-                            
+
+
                             <li class="kt-menu__item" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
                                 <a href="/admin/users" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-user"></i><span class="kt-menu__link-text">User</span></a>
                             </li>
@@ -345,7 +345,7 @@
 
 {{-- <script src="{{ asset('assets/js/autoNumeric.js') }}" data-turbolinks-eval="true" type="text/javascript"></script> --}}
 <script>
-    
+
     @if(Session::has('message'))
         toastr.options.closeButton = true;
         toastr.options.timeOut = 0;
@@ -370,7 +370,7 @@
             cancelButtonText: 'Batal'
         }).then((result) => {
             // console.log(result);
-            
+
             if (result.value) {
                 window.livewire.emit('delete',target);
                 // $('#'+target).submit();
@@ -404,7 +404,7 @@
     //     useCurrent: false,
     // });
     // $('.kt-selectpicker').selectpicker();
-            
+
     // $('.datepicker-month').datepicker({
     //     autoclose: true,
     //     format: "mm-yyyy",
@@ -429,7 +429,7 @@
         $('.xdsoft_autocomplete_dropdown').css( "overflow", "auto!important" );
     });
 
-    
+
 </script>
 
 @stack('scripts')

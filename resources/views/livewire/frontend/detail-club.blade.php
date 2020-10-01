@@ -1,6 +1,8 @@
 @section('title')
     Detail Club
 @endsection
+@section('meta_keywords','Detail Club majapahit junior match')
+@section('meta_description','Detail Club Majapahit Junior Match')
 @section('css')
     <style>
         #angel{

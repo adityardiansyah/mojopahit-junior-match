@@ -1,6 +1,8 @@
 @section('title')
     Galeri
 @endsection
+@section('meta_keywords','Galeri majapahit junior match')
+@section('meta_description','Galeri Majapahit Junior Match')
 @section('css')
     <style type="text/css">
         .fancybox-next span {

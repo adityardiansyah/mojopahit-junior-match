@@ -1,6 +1,8 @@
 @section('title')
     Video
 @endsection
+@section('meta_keywords','Kumpulan Video majapahit junior match')
+@section('meta_description','Kumpulan Video Majapahit Junior Match')
 <div>
     <!--Page Title-->
     <section class="page-banner" style="background-image:url({{asset('images/headerpage.jpg')}});">

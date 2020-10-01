@@ -1,6 +1,8 @@
 @section('title')
     Artikel
 @endsection
+@section('meta_keywords','artikel majapahit junior match')
+@section('meta_description','Kumpulan Artikel Majapahit Junior Match')
 @section('css')
     <style>
         .text p{

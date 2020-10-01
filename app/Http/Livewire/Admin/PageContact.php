@@ -27,6 +27,8 @@ class PageContact extends Component
     public $poster;
     public $v_poster;
     public $landing_video;
+    public $meta_keyword;
+    public $meta_description;
 
     public function mount()
     {
@@ -47,6 +49,8 @@ class PageContact extends Component
             $this->address2 = empty($slice['address2'])? '' : $slice['address2'];
             $this->landing_video = empty($slice['landing_video'])? '' : $slice['landing_video'];
             $this->v_poster = empty($slice['poster'])? '' : $slice['poster'];
+            $this->meta_keyword = empty($slice['meta_keyword'])? '' : $slice['meta_keyword'];
+            $this->meta_description = empty($slice['meta_description'])? '' : $slice['meta_description'];
         }
     }
 
@@ -85,6 +89,8 @@ class PageContact extends Component
             'address2' => $this->address2,
             'landing_video' => $this->landing_video,
             'poster' => $image,
+            'meta_keyword' => $this->meta_keyword,
+            'meta_description' => $this->meta_description,
         ];
         $data->update([
             'description' => json_encode($description),

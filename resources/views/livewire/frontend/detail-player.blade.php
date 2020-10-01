@@ -1,6 +1,8 @@
 @section('title')
     Detail Pemain
 @endsection
+@section('meta_keywords',$player->club->name)
+@section('meta_description',$player->name)
 @section('css')
     <style>
         .table td{

@@ -1,6 +1,8 @@
 @section('title')
     List Club
 @endsection
+@section('meta_keywords','List Club majapahit junior match')
+@section('meta_description','List Club Majapahit Junior Match')
 <div>
     <!--Page Title-->
     <section class="page-banner" style="background-image:url({{asset('images/headerpage.jpg')}});">

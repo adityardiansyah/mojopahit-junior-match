@@ -1,6 +1,8 @@
 @section('title')
     Kompetisi Cup
 @endsection
+@section('meta_keywords','Kompetisi Cup majapahit junior match')
+@section('meta_description','Kompetisi Cup Majapahit Junior Match')
 <div>
     <!--Page Title-->
     <section class="page-banner" style="background-image:url(https://majapahitjuniormatch.com/wp-content/uploads/2020/06/5-1-of-1-scaled.jpg);">

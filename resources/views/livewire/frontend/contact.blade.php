@@ -1,6 +1,8 @@
 @section('title')
     Hubungi Kami
 @endsection
+@section('meta_keywords','Hubungi Kami')
+@section('meta_description','Hubungi Kami')
 @section('css')
     <style>
         .contact-info-block{

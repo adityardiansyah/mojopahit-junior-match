@@ -1,6 +1,8 @@
 @section('title')
     Tentang Kami
 @endsection
+@section('meta_keywords','tentang majapahit junior match')
+@section('meta_description','Tentang Majapahit Junior Match')
 <style>
     .content-column{
         background: #fff;

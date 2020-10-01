@@ -1,6 +1,8 @@
 @section('title')
     {{ $meta_title }}
 @endsection
+@section('meta_keywords',$meta_keywords)
+@section('meta_description',$meta_description)
 <div>
     <!--Page Title-->
     <section class="page-banner" style="background-image:url({{ asset('storage/'.$image) }});">

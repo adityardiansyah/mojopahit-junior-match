@@ -1,6 +1,8 @@
 @section('title')
 Beranda
 @endsection
+@section('meta_keywords',$meta_keywords)
+@section('meta_description',$meta_description)
 <div>
     <livewire:frontend.slider />
     <div style="background: #010914;">

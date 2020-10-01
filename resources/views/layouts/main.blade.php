@@ -3,6 +3,22 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="keywords" content="@yield('meta_keywords')">
+<meta name="description" content="@yield('meta_description')">
+
+<meta property="og:title" content="@yield('title')" />
+<meta property="og:description" content="@yield('meta_description')" />
+<meta property="og:url" content="{{url()->current()}}" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="majapahitjuniormatch.com" />
+<meta property="og:image" content="https://majapahitjuniormatch.com/storage/image_about/Xy1i4bIejtIEyYg98bKPs9ceMf4D04th3OXJMdFQ.png" />
+
+<meta name="robots" content="index, follow" />
+<meta property="language" content="Indonesia" />
+<meta property="webcrawlers" content="all" />
+<meta property="rating" content="general" />
+<meta property="spiders" content="all" />
+<link rel="canonical" href="{{url()->current()}}"/>
 <title>@yield('title') | Mojopahit Junior Match</title>
 
 <!-- Stylesheets -->

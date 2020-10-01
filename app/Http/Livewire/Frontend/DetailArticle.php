@@ -17,6 +17,8 @@ class DetailArticle extends Component
     public $meta_title;
     public $category_all;
     public $post_category;
+    public $meta_keywords;
+    public $meta_description;
 
     public function mount($slug)
     {
@@ -29,6 +31,8 @@ class DetailArticle extends Component
             $this->image = $cek->image;
             $this->published_at = $cek->published_at;
             $this->meta_title = $cek->meta_title;
+            $this->meta_keywords = $cek->meta_keyword;
+            $this->meta_description = $cek->meta_description;
 
             $this->category_all = Category::orderBy('name','asc')->get();
             foreach($this->category_all as $key => $item){

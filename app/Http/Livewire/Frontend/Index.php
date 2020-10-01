@@ -23,6 +23,8 @@ class Index extends Component
     public $address2;
     public $v_poster;
     public $landing_video;
+    public $meta_keywords;
+    public $meta_description;
 
     public function render()
     {
@@ -42,6 +44,8 @@ class Index extends Component
             $this->address2 = empty($slice['address2'])? '' : $slice['address2'];
             $this->landing_video = empty($slice['landing_video'])? '' : $slice['landing_video'];
             $this->v_poster = empty($slice['poster'])? '' : $slice['poster'];
+            $this->meta_keywords = empty($slice['meta_keyword']) ? '' : $slice['meta_keyword'];
+            $this->meta_description = empty($slice['meta_description']) ? '' : $slice['meta_description'];
         }
 
         return view('livewire.frontend.index', [

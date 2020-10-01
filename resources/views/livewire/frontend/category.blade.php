@@ -1,6 +1,8 @@
 @section('title')
     Kategori
 @endsection
+@section('meta_keywords','Kategori majapahit junior match')
+@section('meta_description','Kategori Majapahit Junior Match')
 @section('css')
     <style>
         .text p{

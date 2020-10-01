@@ -104,9 +104,27 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <h4>SEO GOOGLE</h4>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="meta_keyword">Kata Kunci Web Majapahit</label>
+                                                <input wire:model="meta_keyword" type="text" class="form-control" name="meta_keyword" id="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="form-group">
+                                                <label for="meta_description">Tentang Web Majapahit</label>
+                                                <input wire:model="meta_description" type="text" class="form-control" name="meta_description" id="">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </table>
                             </div>
                             <div class="modal-footer">
+                                <div wire:loading>
+                                    Proses Simpan...
+                                </div>
                                 <button type="submit" class="btn btn-primary"><i class="la la-save"></i>Simpan</button>
                             </div>
                         </form>
