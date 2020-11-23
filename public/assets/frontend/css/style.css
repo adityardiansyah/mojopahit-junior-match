@@ -295,8 +295,8 @@ figure {
     padding: 10px 30px;
     font-weight: 500;
     overflow: hidden;
-    border: 1px solid #333333;
-    background-color: #333333;
+    border: 1px solid #010914;
+    background-color: #010914;
 }
 
 .btn-style-four:hover {
@@ -4658,6 +4658,11 @@ img {
 .contact-form .form-group input[type="email"],
 .contact-form .form-group input[type="tel"],
 .contact-form .form-group input[type="url"],
+.contact-form .form-group input[type="date"],
+.contact-form .form-group input[type="time"],
+.contact-form .form-group input[name="date"],
+.contact-form .form-group input[name="time_start"],
+.contact-form .form-group input[name="time_end"],
 .contact-form .form-group textarea,
 .contact-form .form-group select {
     position: relative;
@@ -4690,7 +4695,7 @@ img {
 .contact-form .form-group input:focus,
 .contact-form .form-group select:focus,
 .contact-form .form-group textarea:focus {
-    border-color: #ed7902;
+    border-color: #00132d;
 }
 
 .contact-form .form-group textarea {
@@ -8411,7 +8416,7 @@ a.ui-button:active,
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: #ed7902;
+    background-color: #00132d;
     opacity: .90;
     content: '';
 }

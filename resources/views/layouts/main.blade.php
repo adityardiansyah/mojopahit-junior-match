@@ -36,7 +36,12 @@
 <!-- Scripts -->
 <script src="{{ asset('public/js/app.js') }}" defer></script>
 <style>
-
+.toast .toast-message{
+    font-size: 1.1rem;
+}
+.toast-info{
+    background: #0abb87;
+}
 </style>
 @yield('css')
 <livewire:styles>
@@ -72,6 +77,7 @@
 <script src="{{asset('public/assets/frontend/js/script.js')}} "></script>
 @yield('js')
 <script>
+
     if($('.mobile-menu').length){
         var mobileMenuContent = $('.main-header .nav-outer .main-menu .navigation').html();
         $('.mobile-menu').append('<div class="close-btn"><span class="icon flaticon-cancel-music"></span></div>');

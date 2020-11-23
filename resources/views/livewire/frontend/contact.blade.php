@@ -17,7 +17,7 @@
             <div class="inner-container clearfix">
                 <h1>Hubungi Kami</h1>
                 <ul class="bread-crumb clearfix">
-                    <li><a href="index-2.html"><i class="la la-home"></i>Beranda</a></li>
+                    <li><a href=""><i class="la la-home"></i>Beranda</a></li>
                     <li>Hubungi Kami</li>
                 </ul>
             </div>

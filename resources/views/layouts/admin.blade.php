@@ -206,8 +206,11 @@
                             </li>
 
 
-                            <li class="kt-menu__item" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
-                                <a href="/admin/users" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-user"></i><span class="kt-menu__link-text">User</span></a>
+                            <li class="kt-menu__item @if($menu_active == 'user') kt-menu__item--here @endif" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+                                <a href="{{ url('/admin/users') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-user"></i><span class="kt-menu__link-text">User</span></a>
+                            </li>
+                            <li class="kt-menu__item @if($menu_active == 'booking') kt-menu__item--here @endif" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+                                <a href="{{ url('/admin/booking') }}" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon-calendar"></i><span class="kt-menu__link-text">Booking</span></a>
                             </li>
                     </ul>
                 </div>

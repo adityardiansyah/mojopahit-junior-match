@@ -40,6 +40,9 @@ Route::group(['middleware' => 'auth'], function(){
     Route::livewire('/admin/gallery','admin.gallery')->layout('layouts.admin')->name('admin.gallery');
 
     Route::livewire('/admin/video','admin.video')->layout('layouts.admin')->name('admin.video');
+
+    Route::livewire('/admin/booking','admin.booking')->layout('layouts.admin')->name('admin.booking');
+    Route::livewire('/admin/booking-edit/{id}','admin.booking-edit')->layout('layouts.admin')->name('admin.booking-edit');
 });
 
 Route::livewire('/','frontend.index')->layout('layouts.main')->name('index');
@@ -54,4 +57,5 @@ Route::livewire('/detail-club/{id}','frontend.detail-club')->layout('layouts.mai
 Route::livewire('/detail-pemain/{id}','frontend.detail-player')->layout('layouts.main')->name('detail-pemain');
 Route::livewire('/cup','frontend.cup')->layout('layouts.main')->name('cup');
 Route::livewire('/league','frontend.league')->layout('layouts.main')->name('league');
-Route::livewire('/hubungi-kami','frontend.contact')->layout('layouts.main')->name('contact');
+Route::livewire('/hubungi-kami', 'frontend.contact')->layout('layouts.main')->name('contact');
+Route::livewire('/booking', 'frontend.booking')->layout('layouts.main')->name('booking');
