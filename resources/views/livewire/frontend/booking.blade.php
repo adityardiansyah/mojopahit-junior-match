@@ -31,21 +31,23 @@
                     </div>
                 </div>
             @endif
-            @if(session()->has('message'))
-            @php
-                $message = Session::get('message');
-            @endphp
-                @if ($message['type'] == 'success')
-                    <div class="alert alert-success">
-                        <h5>Booking Berhasil!</h5>
-                        <p>Segera konfimasi admin di nomor dibawah ini dan transfer ke rekening dibawah ini dan kirim bukti transfer</p>
-                        <p>
-                            <b>Nomor Telepon / Whatsapp : </b> <span><a href="tel:085850644757" style="color:#010914; text-decoration: underline">085850644757 (admin)</a></span><br>
-                            <b>Nomor Rekening : </b> <span>BCA 0507229992 - ATAS NAMA PT MAJAPAHIT JUNIOR MATCH </span>
-                        </p>
-                    </div>
+            <div id="alert">
+                @if(session()->has('message'))
+                @php
+                    $message = Session::get('message');
+                @endphp
+                    @if ($message['type'] == 'success')
+                        <div class="alert alert-success">
+                            <h5>Booking Berhasil!</h5>
+                            <p>Segera konfimasi admin di nomor dibawah ini dan transfer ke rekening dibawah ini dan kirim bukti transfer</p>
+                            <p>
+                                <b>Nomor Telepon / Whatsapp : </b> <span><a href="tel:085850644757" style="color:#010914; text-decoration: underline">085850644757 (admin)</a></span><br>
+                                <b>Nomor Rekening : </b> <span>BCA 0507229992 - ATAS NAMA PT MAJAPAHIT JUNIOR MATCH </span>
+                            </p>
+                        </div>
+                    @endif
                 @endif
-            @endif
+            </div>
             @if($showInfo)
             <div id="info-booking">
                 <table class="table" style="overflow: scroll">
@@ -130,7 +132,7 @@
                             </div>
                             
                             <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                <button class="theme-btn btn-style-four" type="submit">Submit</button>
+                                <button class="theme-btn btn-style-four" id="btn" type="submit">Submit</button>
                             </div>
                         </div>
                     </form>
@@ -144,5 +146,8 @@
         $('#date').on('change', function(){
             $('html,body').animate({ scrollTop: $('#info-booking').offset().top }, 'slow');
         })
+        $('#btn').on('click', function(){
+            $('html,body').animate({ scrollTop: $('#alert').offset().top }, 'slow');
+        })  
     </script>
 @endsection
