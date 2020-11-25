@@ -46,17 +46,55 @@
                     </div>
                 @endif
             @endif
+            @if($showInfo)
+            <div id="info-booking">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nama Booking</th>
+                            <th>Tanggal Booking</th>
+                            <th>Jam Booking</th>
+                            <th>Lapangan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @forelse ($info as $item)
+                        <tr>
+                            <td>
+                                {{ $item->name }}
+                            </td>
+                            <td>
+                                {{ GlobalHelper::tgl_indo($item->date) }}
+                            </td>
+                            <td>
+                                {{ $item->time_start }} - {{ $item->time_end }}
+                            </td>
+                            <td>
+                                {{ $item->lapangan }}
+                            </td>
+                        </tr>
+                        @empty
+                            <tr>
+                                <td colspan="3">
+                                    <h5 class="text-center text-white">Tidak ada Booking</h5>
+                                </td>
+                            </tr>
+                        @endforelse
+                    </tbody>
+                </table>
+            </div>
+            @endif
             <!-- Contact Form -->
             <div class="contact-form style-two">
                 <div class="form-inner">
                     <!--Comment Form-->
                 <form method="post" action="{{ route('booking')}}" id="contact-form" wire:submit.prevent="store">
                         <div class="row clearfix">
-                            <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                            <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                 <input type="text" wire:model="name" placeholder="Nama Penyewa / SSB / Club" required>
                             </div>
                             
-                            <div class="col-lg-4 col-md-6 col-sm-12 form-group" wire:ignore>
+                            <div class="col-lg-12 col-md-12 col-sm-12 form-group" wire:ignore>
                                 <select wire:model="category" id="">
                                     <option value="SSB" selected>SSB</option>
                                     <option value="Club">Club</option>
@@ -64,23 +102,23 @@
                                 </select>
                             </div>
 
-                            <div class="col-lg-4 col-md-12 col-sm-12 form-group">
+                            <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                 <input type="text" wire:model="phone" placeholder="Nomor Telepon / Whatsapp" required>
                             </div>
                             
-                            <div class="col-lg-3 col-md-3 col-sm-3 form-group">
-                                <input wire:model="date" required placeholder="Tanggal Booking" name="date" onfocus="(this.type='date')">
+                            <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                <input wire:model="date" wire:change="info" required placeholder="Tanggal Booking" name="date" onfocus="(this.type='date')" id="date">
                             </div>
                             
-                            <div class="col-lg-3 col-md-3 col-sm-3 form-group">
+                            <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                 <input placeholder="Mulai Jam Booking" onfocus="(this.type='time')" name="time_start" wire:model="time_start" required value="">
                             </div>
 
-                            <div class="col-lg-3 col-md-3 col-sm-3 form-group">
+                            <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                 <input placeholder="Sampai Jam Booking" onfocus="(this.type='time')" name="time_end" wire:model="time_end" required value="">
                             </div>
 
-                            <div class="col-lg-3 col-md-3 col-sm-3 form-group">
+                            <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                 <select wire:model="lapangan" id="">
                                     <option value="Lapangan 1">Lapangan 1</option>
                                     <option value="Lapangan 2">Lapangan 2</option>
@@ -98,3 +136,8 @@
         </div>
     </section>
 </div>
+@section('js')
+    <script>
+
+    </script>
+@endsection

@@ -7,7 +7,13 @@ use Livewire\Component;
 
 class Booking extends Component
 {
-    public $name, $category = 'ssb', $phone, $date, $time_start, $time_end, $lapangan='lapangan_1';
+    public $name, $category = 'SSB', $phone, $date, $time_start, $time_end, $lapangan='Lapangan 1', $info = [], $showInfo = false;
+
+    public function info()
+    {
+        $this->showInfo = TRUE;
+        $this->info = AppBooking::where('date', $this->date)->get();
+    }
 
     public function render()
     {
