@@ -53,4 +53,13 @@ class Booking extends Component
             return redirect()->route('admin.booking-edit', $id);
         }
     }
+
+    public function delete($id)
+    {
+        if ($id) {
+            AppBooking::find($id)->delete();
+            session()->flash('message', array('type' => 'success', 'content' => 'Data berhasil dihapus'));
+            return redirect()->route('admin.booking');
+        }
+    }
 }

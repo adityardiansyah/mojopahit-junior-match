@@ -8,7 +8,7 @@
                 <h3 class="kt-subheader__title">Formulir Edit Booking</h3>
             </div>
             <div class="kt-subheader__toolbar">
-                <a href="{{ route('admin.article') }}" class="btn btn-default btn-sm btn-bold">Kembali</a>
+                <a href="{{ route('admin.booking') }}" class="btn btn-default btn-sm btn-bold">Kembali</a>
             </div>
         </div>
     </div>

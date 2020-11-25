@@ -12,7 +12,7 @@ class Booking extends Component
     public function info()
     {
         $this->showInfo = TRUE;
-        $this->info = AppBooking::where('date', $this->date)->get();
+        $this->info = AppBooking::where('date', $this->date)->where('status', '!=', 'Pending')->get();
     }
 
     public function render()
@@ -20,28 +20,35 @@ class Booking extends Component
         return view('livewire.frontend.booking');
     }
 
+    protected $rules = 
+    [
+        'name' => 'required',
+        'category' => 'required',
+        'phone' => 'required',
+        'date' => 'required',
+        'time_start' => 'required',
+        'time_end' => 'required',
+    ];
+
+    protected $messages = 
+    [
+        'image.required' => 'Nama Penyewa Harus diisi!',
+        'category.required' => 'Kategori Penyewa Harus diisi!',
+        'phone.required' => 'Nomor Telepon Penyewa Harus diisi!',
+        'date.required' => 'Tanggal Harus diisi!',
+        'time_start.required' => 'Waktu Mulai Penyewa Harus diisi!',
+        'time_end.required' => 'Waktu Selesai Penyewa Harus diisi!',
+        'lapangan.required' => 'Lapangan Harus diisi!',
+    ];
+    protected $validationAttributes = [
+        'email' => 'email address'
+    ];
+
     public function store()
     {
-        $validatedData = $this->validate(
-            [
-                'name' => 'required',
-                'category' => 'required',
-                'phone' => 'required',
-                'date' => 'required',
-                'time_start' => 'required',
-                'time_end' => 'required',
-            ],
-            [
-                'image.required' => 'Nama Penyewa Harus diisi!',
-                'category.required' => 'Kategori Penyewa Harus diisi!',
-                'phone.required' => 'Nomor Telepon Penyewa Harus diisi!',
-                'date.required' => 'Tanggal Harus diisi!',
-                'time_start.required' => 'Waktu Mulai Penyewa Harus diisi!',
-                'time_end.required' => 'Waktu Selesai Penyewa Harus diisi!',
-                'lapangan.required' => 'Lapangan Harus diisi!',
-            ]
-        );
-        AppBooking::create([
+        $validate = $this->validate([]);
+        AppBooking::create(
+             [
             'name' => $this->name,
             'category' => $this->category,
             'phone' => $this->phone,

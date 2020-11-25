@@ -48,9 +48,12 @@
             @endif
             @if($showInfo)
             <div id="info-booking">
-                <table class="table">
+                <table class="table" style="overflow: scroll">
                     <thead>
                         <tr>
+                            <th colspan="4" class="text-center text-white">List Booking Tanggal Tersebut</th>
+                        </tr>
+                        <tr class="text-white">
                             <th>Nama Booking</th>
                             <th>Tanggal Booking</th>
                             <th>Jam Booking</th>
@@ -67,7 +70,7 @@
                                 {{ GlobalHelper::tgl_indo($item->date) }}
                             </td>
                             <td>
-                                {{ $item->time_start }} - {{ $item->time_end }}
+                                {{ date('h:i', strtotime($item->time_start)) }} - {{ date('h:i', strtotime($item->time_end)) }}
                             </td>
                             <td>
                                 {{ $item->lapangan }}
@@ -75,8 +78,8 @@
                         </tr>
                         @empty
                             <tr>
-                                <td colspan="3">
-                                    <h5 class="text-center text-white">Tidak ada Booking</h5>
+                                <td colspan="4" class="text-center">
+                                    <b class=" text-white">Tidak ada Booking</b>
                                 </td>
                             </tr>
                         @endforelse
@@ -91,11 +94,11 @@
                 <form method="post" action="{{ route('booking')}}" id="contact-form" wire:submit.prevent="store">
                         <div class="row clearfix">
                             <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                <input type="text" wire:model="name" placeholder="Nama Penyewa / SSB / Club" required>
+                                <input type="text" wire:model="name" placeholder="Nama Penyewa / SSB / Club" required name="name">
                             </div>
                             
                             <div class="col-lg-12 col-md-12 col-sm-12 form-group" wire:ignore>
-                                <select wire:model="category" id="">
+                                <select wire:model="category" id="" name="category">
                                     <option value="SSB" selected>SSB</option>
                                     <option value="Club">Club</option>
                                     <option value="Umum">Umum</option>
@@ -103,7 +106,7 @@
                             </div>
 
                             <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                <input type="text" wire:model="phone" placeholder="Nomor Telepon / Whatsapp" required>
+                                <input type="text" wire:model="phone" placeholder="Nomor Telepon / Whatsapp" required name="phone">
                             </div>
                             
                             <div class="col-lg-12 col-md-12 col-sm-12 form-group">
@@ -119,7 +122,7 @@
                             </div>
 
                             <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                <select wire:model="lapangan" id="">
+                                <select wire:model="lapangan" id="" name="lapangan">
                                     <option value="Lapangan 1">Lapangan 1</option>
                                     <option value="Lapangan 2">Lapangan 2</option>
                                     <option value="Full Lapangan">Full Lapangan</option>
@@ -138,6 +141,8 @@
 </div>
 @section('js')
     <script>
-
+        $('#date').on('change', function(){
+            $('html,body').animate({ scrollTop: $('#info-booking').offset().top }, 'slow');
+        })
     </script>
 @endsection
